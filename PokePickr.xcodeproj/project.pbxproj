@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE101A492782131E005337F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A482782131E005337F1 /* AppDelegate.swift */; };
+		EE101A4B2782131E005337F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A4A2782131E005337F1 /* SceneDelegate.swift */; };
+		EE101A4D2782131E005337F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A4C2782131E005337F1 /* ViewController.swift */; };
+		EE101A502782131E005337F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE101A4E2782131E005337F1 /* Main.storyboard */; };
+		EE101A532782131E005337F1 /* PokePickr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE101A512782131E005337F1 /* PokePickr.xcdatamodeld */; };
+		EE101A5527821322005337F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE101A5427821322005337F1 /* Assets.xcassets */; };
+		EE101A5827821322005337F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE101A5627821322005337F1 /* LaunchScreen.storyboard */; };
+		EE101A6327821322005337F1 /* PokePickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6227821322005337F1 /* PokePickrTests.swift */; };
+		EE101A6D27821322005337F1 /* PokePickrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6C27821322005337F1 /* PokePickrUITests.swift */; };
+		EE101A6F27821322005337F1 /* PokePickrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6E27821322005337F1 /* PokePickrUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE101A5F27821322005337F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE101A3D2782131E005337F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE101A442782131E005337F1;
+			remoteInfo = PokePickr;
+		};
+		EE101A6927821322005337F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE101A3D2782131E005337F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE101A442782131E005337F1;
+			remoteInfo = PokePickr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE101A452782131E005337F1 /* PokePickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokePickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE101A482782131E005337F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE101A4A2782131E005337F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE101A4C2782131E005337F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE101A4F2782131E005337F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE101A522782131E005337F1 /* PokePickr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokePickr.xcdatamodel; sourceTree = "<group>"; };
+		EE101A5427821322005337F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE101A5727821322005337F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE101A5927821322005337F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE101A5E27821322005337F1 /* PokePickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokePickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE101A6227821322005337F1 /* PokePickrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokePickrTests.swift; sourceTree = "<group>"; };
+		EE101A6827821322005337F1 /* PokePickrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokePickrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE101A6C27821322005337F1 /* PokePickrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokePickrUITests.swift; sourceTree = "<group>"; };
+		EE101A6E27821322005337F1 /* PokePickrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokePickrUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE101A422782131E005337F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE101A5B27821322005337F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE101A6527821322005337F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE101A3C2782131E005337F1 = {
+			isa = PBXGroup;
+			children = (
+				EE101A472782131E005337F1 /* PokePickr */,
+				EE101A6127821322005337F1 /* PokePickrTests */,
+				EE101A6B27821322005337F1 /* PokePickrUITests */,
+				EE101A462782131E005337F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE101A462782131E005337F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE101A452782131E005337F1 /* PokePickr.app */,
+				EE101A5E27821322005337F1 /* PokePickrTests.xctest */,
+				EE101A6827821322005337F1 /* PokePickrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE101A472782131E005337F1 /* PokePickr */ = {
+			isa = PBXGroup;
+			children = (
+				EE101A482782131E005337F1 /* AppDelegate.swift */,
+				EE101A4A2782131E005337F1 /* SceneDelegate.swift */,
+				EE101A4C2782131E005337F1 /* ViewController.swift */,
+				EE101A4E2782131E005337F1 /* Main.storyboard */,
+				EE101A5427821322005337F1 /* Assets.xcassets */,
+				EE101A5627821322005337F1 /* LaunchScreen.storyboard */,
+				EE101A5927821322005337F1 /* Info.plist */,
+				EE101A512782131E005337F1 /* PokePickr.xcdatamodeld */,
+			);
+			path = PokePickr;
+			sourceTree = "<group>";
+		};
+		EE101A6127821322005337F1 /* PokePickrTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE101A6227821322005337F1 /* PokePickrTests.swift */,
+			);
+			path = PokePickrTests;
+			sourceTree = "<group>";
+		};
+		EE101A6B27821322005337F1 /* PokePickrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE101A6C27821322005337F1 /* PokePickrUITests.swift */,
+				EE101A6E27821322005337F1 /* PokePickrUITestsLaunchTests.swift */,
+			);
+			path = PokePickrUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE101A442782131E005337F1 /* PokePickr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE101A7227821322005337F1 /* Build configuration list for PBXNativeTarget "PokePickr" */;
+			buildPhases = (
+				EE101A412782131E005337F1 /* Sources */,
+				EE101A422782131E005337F1 /* Frameworks */,
+				EE101A432782131E005337F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokePickr;
+			productName = PokePickr;
+			productReference = EE101A452782131E005337F1 /* PokePickr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE101A5D27821322005337F1 /* PokePickrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE101A7527821322005337F1 /* Build configuration list for PBXNativeTarget "PokePickrTests" */;
+			buildPhases = (
+				EE101A5A27821322005337F1 /* Sources */,
+				EE101A5B27821322005337F1 /* Frameworks */,
+				EE101A5C27821322005337F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE101A6027821322005337F1 /* PBXTargetDependency */,
+			);
+			name = PokePickrTests;
+			productName = PokePickrTests;
+			productReference = EE101A5E27821322005337F1 /* PokePickrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE101A6727821322005337F1 /* PokePickrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE101A7827821322005337F1 /* Build configuration list for PBXNativeTarget "PokePickrUITests" */;
+			buildPhases = (
+				EE101A6427821322005337F1 /* Sources */,
+				EE101A6527821322005337F1 /* Frameworks */,
+				EE101A6627821322005337F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE101A6A27821322005337F1 /* PBXTargetDependency */,
+			);
+			name = PokePickrUITests;
+			productName = PokePickrUITests;
+			productReference = EE101A6827821322005337F1 /* PokePickrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE101A3D2782131E005337F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					EE101A442782131E005337F1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					EE101A5D27821322005337F1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = EE101A442782131E005337F1;
+					};
+					EE101A6727821322005337F1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = EE101A442782131E005337F1;
+					};
+				};
+			};
+			buildConfigurationList = EE101A402782131E005337F1 /* Build configuration list for PBXProject "PokePickr" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE101A3C2782131E005337F1;
+			productRefGroup = EE101A462782131E005337F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE101A442782131E005337F1 /* PokePickr */,
+				EE101A5D27821322005337F1 /* PokePickrTests */,
+				EE101A6727821322005337F1 /* PokePickrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE101A432782131E005337F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE101A5827821322005337F1 /* LaunchScreen.storyboard in Resources */,
+				EE101A5527821322005337F1 /* Assets.xcassets in Resources */,
+				EE101A502782131E005337F1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE101A5C27821322005337F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE101A6627821322005337F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE101A412782131E005337F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE101A4D2782131E005337F1 /* ViewController.swift in Sources */,
+				EE101A492782131E005337F1 /* AppDelegate.swift in Sources */,
+				EE101A532782131E005337F1 /* PokePickr.xcdatamodeld in Sources */,
+				EE101A4B2782131E005337F1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE101A5A27821322005337F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE101A6327821322005337F1 /* PokePickrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE101A6427821322005337F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE101A6D27821322005337F1 /* PokePickrUITests.swift in Sources */,
+				EE101A6F27821322005337F1 /* PokePickrUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE101A6027821322005337F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE101A442782131E005337F1 /* PokePickr */;
+			targetProxy = EE101A5F27821322005337F1 /* PBXContainerItemProxy */;
+		};
+		EE101A6A27821322005337F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE101A442782131E005337F1 /* PokePickr */;
+			targetProxy = EE101A6927821322005337F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE101A4E2782131E005337F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE101A4F2782131E005337F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE101A5627821322005337F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE101A5727821322005337F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE101A7027821322005337F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE101A7127821322005337F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE101A7327821322005337F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ6966LG77;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokePickr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.PokePickr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE101A7427821322005337F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ6966LG77;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokePickr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.PokePickr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE101A7627821322005337F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ6966LG77;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.PokePickrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokePickr.app/PokePickr";
+			};
+			name = Debug;
+		};
+		EE101A7727821322005337F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ6966LG77;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.PokePickrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokePickr.app/PokePickr";
+			};
+			name = Release;
+		};
+		EE101A7927821322005337F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ6966LG77;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.PokePickrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokePickr;
+			};
+			name = Debug;
+		};
+		EE101A7A27821322005337F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ6966LG77;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.PokePickrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokePickr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE101A402782131E005337F1 /* Build configuration list for PBXProject "PokePickr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE101A7027821322005337F1 /* Debug */,
+				EE101A7127821322005337F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE101A7227821322005337F1 /* Build configuration list for PBXNativeTarget "PokePickr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE101A7327821322005337F1 /* Debug */,
+				EE101A7427821322005337F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE101A7527821322005337F1 /* Build configuration list for PBXNativeTarget "PokePickrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE101A7627821322005337F1 /* Debug */,
+				EE101A7727821322005337F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE101A7827821322005337F1 /* Build configuration list for PBXNativeTarget "PokePickrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE101A7927821322005337F1 /* Debug */,
+				EE101A7A27821322005337F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE101A512782131E005337F1 /* PokePickr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE101A522782131E005337F1 /* PokePickr.xcdatamodel */,
+			);
+			currentVersion = EE101A522782131E005337F1 /* PokePickr.xcdatamodel */;
+			path = PokePickr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EE101A3D2782131E005337F1 /* Project object */;
+}
