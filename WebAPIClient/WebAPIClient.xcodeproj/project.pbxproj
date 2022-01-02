@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA34CC3C2386D0AC00DC7027 /* WebAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA34CC322386D0AC00DC7027 /* WebAPIClient.framework */; };
+		AA34CC412386D0AC00DC7027 /* WebAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC402386D0AC00DC7027 /* WebAPIClientTests.swift */; };
+		AA34CC432386D0AC00DC7027 /* WebAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AA34CC352386D0AC00DC7027 /* WebAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA34CC522386D70A00DC7027 /* WebAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC512386D70A00DC7027 /* WebAPIClient.swift */; };
+		AA34CC542386D76500DC7027 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC532386D76500DC7027 /* Constants.swift */; };
+		AA34CC582386D9B000DC7027 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC572386D9B000DC7027 /* APIError.swift */; };
+		AA34CC5D2386DB8300DC7027 /* RESTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC5C2386DB8300DC7027 /* RESTResponse.swift */; };
+		AA34CC5F2386DB9600DC7027 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC5E2386DB9600DC7027 /* APIResponse.swift */; };
+		AA34CC612386DC1C00DC7027 /* RESTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC602386DC1C00DC7027 /* RESTError.swift */; };
+		AA34CC652386E2E300DC7027 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC642386E2E300DC7027 /* URLRequestBuilder.swift */; };
+		AA34CC672386E48E00DC7027 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC662386E48E00DC7027 /* Request.swift */; };
+		AA34CC692386E70A00DC7027 /* ResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC682386E70A00DC7027 /* ResponseDecoder.swift */; };
+		AA34CC6B2386F13900DC7027 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34CC6A2386F13900DC7027 /* GenericError.swift */; };
+		AA378F272388399E0045B89A /* RESTResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA378F262388399E0045B89A /* RESTResponseTests.swift */; };
+		AA378F29238842EF0045B89A /* APIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA378F28238842EF0045B89A /* APIResponseTests.swift */; };
+		AA378F2B2388684D0045B89A /* ResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA378F2A2388684D0045B89A /* ResponseDecoderTests.swift */; };
+		AA378F2E238874CD0045B89A /* GenericErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA378F2D238874CD0045B89A /* GenericErrorTests.swift */; };
+		AA378F30238875690045B89A /* APIErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA378F2F238875690045B89A /* APIErrorTests.swift */; };
+		AAD83963238830C8008FBBAE /* URLRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD83962238830C8008FBBAE /* URLRequestBuilderTests.swift */; };
+		AAD8396723883141008FBBAE /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD8396623883141008FBBAE /* MockRequest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA34CC3D2386D0AC00DC7027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA34CC292386D0AC00DC7027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA34CC312386D0AC00DC7027;
+			remoteInfo = WebAPIClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA34CC322386D0AC00DC7027 /* WebAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA34CC352386D0AC00DC7027 /* WebAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebAPIClient.h; sourceTree = "<group>"; };
+		AA34CC362386D0AC00DC7027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA34CC3B2386D0AC00DC7027 /* WebAPIClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebAPIClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA34CC402386D0AC00DC7027 /* WebAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPIClientTests.swift; sourceTree = "<group>"; };
+		AA34CC422386D0AC00DC7027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA34CC512386D70A00DC7027 /* WebAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPIClient.swift; sourceTree = "<group>"; };
+		AA34CC532386D76500DC7027 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AA34CC572386D9B000DC7027 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		AA34CC5C2386DB8300DC7027 /* RESTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTResponse.swift; sourceTree = "<group>"; };
+		AA34CC5E2386DB9600DC7027 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		AA34CC602386DC1C00DC7027 /* RESTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTError.swift; sourceTree = "<group>"; };
+		AA34CC642386E2E300DC7027 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		AA34CC662386E48E00DC7027 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		AA34CC682386E70A00DC7027 /* ResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecoder.swift; sourceTree = "<group>"; };
+		AA34CC6A2386F13900DC7027 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		AA378F262388399E0045B89A /* RESTResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTResponseTests.swift; sourceTree = "<group>"; };
+		AA378F28238842EF0045B89A /* APIResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseTests.swift; sourceTree = "<group>"; };
+		AA378F2A2388684D0045B89A /* ResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecoderTests.swift; sourceTree = "<group>"; };
+		AA378F2D238874CD0045B89A /* GenericErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorTests.swift; sourceTree = "<group>"; };
+		AA378F2F238875690045B89A /* APIErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorTests.swift; sourceTree = "<group>"; };
+		AAD83962238830C8008FBBAE /* URLRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilderTests.swift; sourceTree = "<group>"; };
+		AAD8396623883141008FBBAE /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA34CC2F2386D0AC00DC7027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA34CC382386D0AC00DC7027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA34CC3C2386D0AC00DC7027 /* WebAPIClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA34CC282386D0AC00DC7027 = {
+			isa = PBXGroup;
+			children = (
+				AA34CC342386D0AC00DC7027 /* WebAPIClient */,
+				AA34CC3F2386D0AC00DC7027 /* WebAPIClientTests */,
+				AA34CC332386D0AC00DC7027 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA34CC332386D0AC00DC7027 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA34CC322386D0AC00DC7027 /* WebAPIClient.framework */,
+				AA34CC3B2386D0AC00DC7027 /* WebAPIClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA34CC342386D0AC00DC7027 /* WebAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				AA34CC352386D0AC00DC7027 /* WebAPIClient.h */,
+				AA34CC362386D0AC00DC7027 /* Info.plist */,
+				AA34CC512386D70A00DC7027 /* WebAPIClient.swift */,
+				AA34CC632386E2CD00DC7027 /* Builders */,
+				AA34CC562386D9A300DC7027 /* Constants */,
+				AA34CC552386D99C00DC7027 /* Errors */,
+				AA34CC5B2386DB7600DC7027 /* Request */,
+				AA34CC5A2386DB6F00DC7027 /* Response */,
+			);
+			path = WebAPIClient;
+			sourceTree = "<group>";
+		};
+		AA34CC3F2386D0AC00DC7027 /* WebAPIClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAD839652388310B008FBBAE /* Specs */,
+				AAD8396423883105008FBBAE /* Mocks */,
+				AA34CC402386D0AC00DC7027 /* WebAPIClientTests.swift */,
+				AA34CC422386D0AC00DC7027 /* Info.plist */,
+			);
+			path = WebAPIClientTests;
+			sourceTree = "<group>";
+		};
+		AA34CC552386D99C00DC7027 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				AA34CC572386D9B000DC7027 /* APIError.swift */,
+				AA34CC602386DC1C00DC7027 /* RESTError.swift */,
+				AA34CC6A2386F13900DC7027 /* GenericError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		AA34CC562386D9A300DC7027 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AA34CC532386D76500DC7027 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AA34CC5A2386DB6F00DC7027 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				AA34CC5C2386DB8300DC7027 /* RESTResponse.swift */,
+				AA34CC5E2386DB9600DC7027 /* APIResponse.swift */,
+				AA34CC682386E70A00DC7027 /* ResponseDecoder.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		AA34CC5B2386DB7600DC7027 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				AA34CC662386E48E00DC7027 /* Request.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		AA34CC632386E2CD00DC7027 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				AA34CC642386E2E300DC7027 /* URLRequestBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		AA378F252388398C0045B89A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				AA378F262388399E0045B89A /* RESTResponseTests.swift */,
+				AA378F28238842EF0045B89A /* APIResponseTests.swift */,
+				AA378F2A2388684D0045B89A /* ResponseDecoderTests.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		AA378F2C238874A20045B89A /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				AA378F2D238874CD0045B89A /* GenericErrorTests.swift */,
+				AA378F2F238875690045B89A /* APIErrorTests.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		AAD83961238830AA008FBBAE /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				AAD83962238830C8008FBBAE /* URLRequestBuilderTests.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		AAD8396423883105008FBBAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AAD8396623883141008FBBAE /* MockRequest.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AAD839652388310B008FBBAE /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				AAD83961238830AA008FBBAE /* Builders */,
+				AA378F252388398C0045B89A /* Response */,
+				AA378F2C238874A20045B89A /* Errors */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AA34CC2D2386D0AC00DC7027 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA34CC432386D0AC00DC7027 /* WebAPIClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AA34CC312386D0AC00DC7027 /* WebAPIClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA34CC462386D0AC00DC7027 /* Build configuration list for PBXNativeTarget "WebAPIClient" */;
+			buildPhases = (
+				AA34CC2D2386D0AC00DC7027 /* Headers */,
+				AA34CC2E2386D0AC00DC7027 /* Sources */,
+				AA34CC2F2386D0AC00DC7027 /* Frameworks */,
+				AA34CC302386D0AC00DC7027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebAPIClient;
+			productName = WebAPIClient;
+			productReference = AA34CC322386D0AC00DC7027 /* WebAPIClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA34CC3A2386D0AC00DC7027 /* WebAPIClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA34CC492386D0AC00DC7027 /* Build configuration list for PBXNativeTarget "WebAPIClientTests" */;
+			buildPhases = (
+				AA34CC372386D0AC00DC7027 /* Sources */,
+				AA34CC382386D0AC00DC7027 /* Frameworks */,
+				AA34CC392386D0AC00DC7027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA34CC3E2386D0AC00DC7027 /* PBXTargetDependency */,
+			);
+			name = WebAPIClientTests;
+			productName = WebAPIClientTests;
+			productReference = AA34CC3B2386D0AC00DC7027 /* WebAPIClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA34CC292386D0AC00DC7027 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Andy Jennings";
+				TargetAttributes = {
+					AA34CC312386D0AC00DC7027 = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+					AA34CC3A2386D0AC00DC7027 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = AA34CC2C2386D0AC00DC7027 /* Build configuration list for PBXProject "WebAPIClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA34CC282386D0AC00DC7027;
+			productRefGroup = AA34CC332386D0AC00DC7027 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA34CC312386D0AC00DC7027 /* WebAPIClient */,
+				AA34CC3A2386D0AC00DC7027 /* WebAPIClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA34CC302386D0AC00DC7027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA34CC392386D0AC00DC7027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA34CC2E2386D0AC00DC7027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA34CC652386E2E300DC7027 /* URLRequestBuilder.swift in Sources */,
+				AA34CC672386E48E00DC7027 /* Request.swift in Sources */,
+				AA34CC612386DC1C00DC7027 /* RESTError.swift in Sources */,
+				AA34CC522386D70A00DC7027 /* WebAPIClient.swift in Sources */,
+				AA34CC542386D76500DC7027 /* Constants.swift in Sources */,
+				AA34CC5D2386DB8300DC7027 /* RESTResponse.swift in Sources */,
+				AA34CC5F2386DB9600DC7027 /* APIResponse.swift in Sources */,
+				AA34CC692386E70A00DC7027 /* ResponseDecoder.swift in Sources */,
+				AA34CC6B2386F13900DC7027 /* GenericError.swift in Sources */,
+				AA34CC582386D9B000DC7027 /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA34CC372386D0AC00DC7027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA34CC412386D0AC00DC7027 /* WebAPIClientTests.swift in Sources */,
+				AAD83963238830C8008FBBAE /* URLRequestBuilderTests.swift in Sources */,
+				AA378F272388399E0045B89A /* RESTResponseTests.swift in Sources */,
+				AA378F29238842EF0045B89A /* APIResponseTests.swift in Sources */,
+				AAD8396723883141008FBBAE /* MockRequest.swift in Sources */,
+				AA378F30238875690045B89A /* APIErrorTests.swift in Sources */,
+				AA378F2B2388684D0045B89A /* ResponseDecoderTests.swift in Sources */,
+				AA378F2E238874CD0045B89A /* GenericErrorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA34CC3E2386D0AC00DC7027 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA34CC312386D0AC00DC7027 /* WebAPIClient */;
+			targetProxy = AA34CC3D2386D0AC00DC7027 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AA34CC442386D0AC00DC7027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA34CC452386D0AC00DC7027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA34CC472386D0AC00DC7027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WebAPIClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyjennings.WebAPIClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA34CC482386D0AC00DC7027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WebAPIClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyjennings.WebAPIClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA34CC4A2386D0AC00DC7027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebAPIClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyjennings.WebAPIClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA34CC4B2386D0AC00DC7027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebAPIClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyjennings.WebAPIClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA34CC2C2386D0AC00DC7027 /* Build configuration list for PBXProject "WebAPIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA34CC442386D0AC00DC7027 /* Debug */,
+				AA34CC452386D0AC00DC7027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA34CC462386D0AC00DC7027 /* Build configuration list for PBXNativeTarget "WebAPIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA34CC472386D0AC00DC7027 /* Debug */,
+				AA34CC482386D0AC00DC7027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA34CC492386D0AC00DC7027 /* Build configuration list for PBXNativeTarget "WebAPIClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA34CC4A2386D0AC00DC7027 /* Debug */,
+				AA34CC4B2386D0AC00DC7027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA34CC292386D0AC00DC7027 /* Project object */;
+}
