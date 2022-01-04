@@ -17,6 +17,13 @@
 		EE101A6327821322005337F1 /* PokePickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6227821322005337F1 /* PokePickrTests.swift */; };
 		EE101A6D27821322005337F1 /* PokePickrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6C27821322005337F1 /* PokePickrUITests.swift */; };
 		EE101A6F27821322005337F1 /* PokePickrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6E27821322005337F1 /* PokePickrUITestsLaunchTests.swift */; };
+		EE49CED02785078000BC6593 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CECF2785078000BC6593 /* Coordinator.swift */; };
+		EE49CED2278507A700BC6593 /* TabBarRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CED1278507A700BC6593 /* TabBarRoutable.swift */; };
+		EE49CED72785080900BC6593 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CED62785080900BC6593 /* ApplicationCoordinator.swift */; };
+		EE49CEDA2785087300BC6593 /* LandingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CED92785087300BC6593 /* LandingCoordinator.swift */; };
+		EE49CEDE2785090200BC6593 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEDD2785090200BC6593 /* LandingViewController.swift */; };
+		EE49CEE02785096600BC6593 /* ApplicationCoordinator+LandingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEDF2785096600BC6593 /* ApplicationCoordinator+LandingCoordinator.swift */; };
+		EE49CEE427850C3F00BC6593 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEE327850C3F00BC6593 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		EE101A6827821322005337F1 /* PokePickrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokePickrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE101A6C27821322005337F1 /* PokePickrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokePickrUITests.swift; sourceTree = "<group>"; };
 		EE101A6E27821322005337F1 /* PokePickrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokePickrUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE49CECF2785078000BC6593 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EE49CED1278507A700BC6593 /* TabBarRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRoutable.swift; sourceTree = "<group>"; };
+		EE49CED62785080900BC6593 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		EE49CED92785087300BC6593 /* LandingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingCoordinator.swift; sourceTree = "<group>"; };
+		EE49CEDD2785090200BC6593 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		EE49CEDF2785096600BC6593 /* ApplicationCoordinator+LandingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationCoordinator+LandingCoordinator.swift"; sourceTree = "<group>"; };
+		EE49CEE327850C3F00BC6593 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +115,11 @@
 		EE101A472782131E005337F1 /* PokePickr */ = {
 			isa = PBXGroup;
 			children = (
-				EE101A482782131E005337F1 /* AppDelegate.swift */,
-				EE101A4A2782131E005337F1 /* SceneDelegate.swift */,
-				EE101A4C2782131E005337F1 /* ViewController.swift */,
+				EE49CEE227850C3300BC6593 /* Extensions */,
+				EE49CEDB278508B700BC6593 /* ViewControllers */,
+				EE49CED3278507D400BC6593 /* Coordinators */,
+				EE49CECE2785076300BC6593 /* Protocols */,
+				EE49CECD2785075400BC6593 /* SupportingFiles */,
 				EE101A4E2782131E005337F1 /* Main.storyboard */,
 				EE101A5427821322005337F1 /* Assets.xcassets */,
 				EE101A5627821322005337F1 /* LaunchScreen.storyboard */,
@@ -128,6 +144,75 @@
 				EE101A6E27821322005337F1 /* PokePickrUITestsLaunchTests.swift */,
 			);
 			path = PokePickrUITests;
+			sourceTree = "<group>";
+		};
+		EE49CECD2785075400BC6593 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EE101A482782131E005337F1 /* AppDelegate.swift */,
+				EE101A4A2782131E005337F1 /* SceneDelegate.swift */,
+				EE101A4C2782131E005337F1 /* ViewController.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		EE49CECE2785076300BC6593 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE49CECF2785078000BC6593 /* Coordinator.swift */,
+				EE49CED1278507A700BC6593 /* TabBarRoutable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EE49CED3278507D400BC6593 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				EE49CED82785086A00BC6593 /* Landing */,
+				EE49CED5278507F400BC6593 /* Application */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		EE49CED5278507F400BC6593 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EE49CED62785080900BC6593 /* ApplicationCoordinator.swift */,
+				EE49CEDF2785096600BC6593 /* ApplicationCoordinator+LandingCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EE49CED82785086A00BC6593 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				EE49CED92785087300BC6593 /* LandingCoordinator.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		EE49CEDB278508B700BC6593 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE49CEDC278508FA00BC6593 /* Landing */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EE49CEDC278508FA00BC6593 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				EE49CEDD2785090200BC6593 /* LandingViewController.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		EE49CEE227850C3300BC6593 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EE49CEE327850C3F00BC6593 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +348,15 @@
 			files = (
 				EE101A4D2782131E005337F1 /* ViewController.swift in Sources */,
 				EE101A492782131E005337F1 /* AppDelegate.swift in Sources */,
+				EE49CEE02785096600BC6593 /* ApplicationCoordinator+LandingCoordinator.swift in Sources */,
+				EE49CED02785078000BC6593 /* Coordinator.swift in Sources */,
+				EE49CED2278507A700BC6593 /* TabBarRoutable.swift in Sources */,
+				EE49CEDA2785087300BC6593 /* LandingCoordinator.swift in Sources */,
 				EE101A532782131E005337F1 /* PokePickr.xcdatamodeld in Sources */,
 				EE101A4B2782131E005337F1 /* SceneDelegate.swift in Sources */,
+				EE49CEE427850C3F00BC6593 /* UIColor+Extensions.swift in Sources */,
+				EE49CEDE2785090200BC6593 /* LandingViewController.swift in Sources */,
+				EE49CED72785080900BC6593 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
