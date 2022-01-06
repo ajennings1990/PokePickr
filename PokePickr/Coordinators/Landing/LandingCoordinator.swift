@@ -23,7 +23,7 @@ class LandingCoordinator: CoordinatorAutoCleanable {
   }
   
   func start() {
-    let landingViewController = LandingViewController()
+    let landingViewController = LandingViewController(delegate: self)
     navigationController.setViewControllers([landingViewController], animated: false)
   }
   
