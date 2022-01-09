@@ -7,6 +7,15 @@ protocol MainViewControllerDelegate: AnyObject {
 class MainViewController: UIViewController {
   
   // UI Components
+    
+  private lazy var appLabel: UILabel = {
+    let label = UILabel()
+    label.text = "PokePickr"
+    label.textAlignment = .center
+    label.textColor = .white
+    label.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+    return label
+  }()
   
   private let stackView: UIStackView = {
     let stackView = UIStackView()
@@ -76,6 +85,9 @@ class MainViewController: UIViewController {
   private func initUI() {
     view.backgroundColor = UIColor.mainBlue
     
+    appLabel.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(appLabel)
+    
     stackView.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(stackView)
     
@@ -86,13 +98,21 @@ class MainViewController: UIViewController {
   }
   
   private func makeConstraints() {
-    stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-    stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
     
-    stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    
-    playButton.heightAnchor.constraint(equalToConstant: 65).isActive = true
-    playButton.widthAnchor.constraint(equalToConstant:  150).isActive = true
+    NSLayoutConstraint.activate([
+      appLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+      appLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
+      appLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 10),
+//      appLabel.heightAnchor.constraint(equalToConstant: 30),
+      
+//      stackView.topAnchor.constraint(equalTo: appLabel.bottomAnchor, constant: 20),
+      stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+      stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
+      stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      
+      playButton.heightAnchor.constraint(equalToConstant: 65),
+      playButton.widthAnchor.constraint(equalToConstant:  150)
+    ])
   }
   
 }

@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokePickr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mza-Sx-3e3">
-                                <rect key="frame" x="126.5" y="428.5" width="161" height="39.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokePickr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mza-Sx-3e3">
+                                <rect key="frame" x="10" y="428" width="394" height="40"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -25,8 +25,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.21658240811386908" green="0.49028785161501026" blue="0.88702879124081013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="mza-Sx-3e3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NoC-tu-JcO"/>
                             <constraint firstItem="mza-Sx-3e3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Tgi-TL-uoD"/>
-                            <constraint firstItem="mza-Sx-3e3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="q2u-aU-g0s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mza-Sx-3e3" secondAttribute="trailing" constant="10" id="dJi-JG-VAD"/>
                             <constraint firstItem="mza-Sx-3e3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tBS-bF-p5c"/>
                             <constraint firstItem="mza-Sx-3e3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="w3Y-Le-qRk"/>
                         </constraints>
@@ -34,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
 </document>
