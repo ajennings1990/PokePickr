@@ -31,6 +31,20 @@ class MainViewCoordinator: CoordinatorAutoCleanable {
 
 extension MainViewCoordinator: MainViewControllerDelegate {
   
+  func playButtonWasPressed(_ viewController: MainViewController) {
+    let coordinator = TrainerGameCoordinator(
+      navigationController: navigationController,
+      delegate: self
+    )
+    start(coordinator: coordinator)
+  }
   
+}
+
+extension MainViewCoordinator: TrainerGameCoordinatorDelegate {
+  
+  func trainerGameCoordinatorCompleted(_ coordinator: MainViewCoordinator) {
+    
+  }
   
 }

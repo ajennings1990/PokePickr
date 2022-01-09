@@ -27,6 +27,9 @@
 		EE49CEE7278738AF00BC6593 /* LandingCoordinator+LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEE6278738AF00BC6593 /* LandingCoordinator+LandingViewController.swift */; };
 		EE49CEEC27874C6A00BC6593 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEEB27874C6A00BC6593 /* MainViewCoordinator.swift */; };
 		EE49CEEF27874CBB00BC6593 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEEE27874CBB00BC6593 /* MainViewController.swift */; };
+		EED09896278B4288003A9FAD /* TrainerGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */; };
+		EED09899278B42F7003A9FAD /* TrainerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */; };
+		EED0989C278B4E45003A9FAD /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		EE49CEE6278738AF00BC6593 /* LandingCoordinator+LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingCoordinator+LandingViewController.swift"; sourceTree = "<group>"; };
 		EE49CEEB27874C6A00BC6593 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		EE49CEEE27874CBB00BC6593 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameCoordinator.swift; sourceTree = "<group>"; };
+		EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameViewController.swift; sourceTree = "<group>"; };
+		EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +180,8 @@
 		EE49CED3278507D400BC6593 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				EE49CEE827873BBC00BC6593 /* MainViewCoordinator */,
+				EED09894278B4279003A9FAD /* TrainerGame */,
+				EE49CEE827873BBC00BC6593 /* MainView */,
 				EE49CED82785086A00BC6593 /* Landing */,
 				EE49CED5278507F400BC6593 /* Application */,
 			);
@@ -202,6 +209,7 @@
 		EE49CEDB278508B700BC6593 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EED09897278B42DA003A9FAD /* TrainerGame */,
 				EE49CEED27874CB100BC6593 /* Main */,
 				EE49CEDC278508FA00BC6593 /* Landing */,
 			);
@@ -224,12 +232,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		EE49CEE827873BBC00BC6593 /* MainViewCoordinator */ = {
+		EE49CEE827873BBC00BC6593 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
 				EE49CEEB27874C6A00BC6593 /* MainViewCoordinator.swift */,
 			);
-			path = MainViewCoordinator;
+			path = MainView;
 			sourceTree = "<group>";
 		};
 		EE49CEED27874CB100BC6593 /* Main */ = {
@@ -238,6 +246,31 @@
 				EE49CEEE27874CBB00BC6593 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		EED09894278B4279003A9FAD /* TrainerGame */ = {
+			isa = PBXGroup;
+			children = (
+				EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */,
+			);
+			path = TrainerGame;
+			sourceTree = "<group>";
+		};
+		EED09897278B42DA003A9FAD /* TrainerGame */ = {
+			isa = PBXGroup;
+			children = (
+				EED0989A278B4D93003A9FAD /* Views */,
+				EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */,
+			);
+			path = TrainerGame;
+			sourceTree = "<group>";
+		};
+		EED0989A278B4D93003A9FAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,16 +407,19 @@
 				EE101A4D2782131E005337F1 /* ViewController.swift in Sources */,
 				EE49CEE7278738AF00BC6593 /* LandingCoordinator+LandingViewController.swift in Sources */,
 				EE101A492782131E005337F1 /* AppDelegate.swift in Sources */,
+				EED0989C278B4E45003A9FAD /* PokemonCollectionViewCell.swift in Sources */,
 				EE49CEE02785096600BC6593 /* ApplicationCoordinator+LandingCoordinator.swift in Sources */,
 				EE49CEEC27874C6A00BC6593 /* MainViewCoordinator.swift in Sources */,
 				EE49CED02785078000BC6593 /* Coordinator.swift in Sources */,
 				EE49CED2278507A700BC6593 /* TabBarRoutable.swift in Sources */,
 				EE49CEEF27874CBB00BC6593 /* MainViewController.swift in Sources */,
+				EED09899278B42F7003A9FAD /* TrainerGameViewController.swift in Sources */,
 				EE49CEDA2785087300BC6593 /* LandingCoordinator.swift in Sources */,
 				EE101A532782131E005337F1 /* PokePickr.xcdatamodeld in Sources */,
 				EE101A4B2782131E005337F1 /* SceneDelegate.swift in Sources */,
 				EE49CEE427850C3F00BC6593 /* UIColor+Extensions.swift in Sources */,
 				EE49CEDE2785090200BC6593 /* LandingViewController.swift in Sources */,
+				EED09896278B4288003A9FAD /* TrainerGameCoordinator.swift in Sources */,
 				EE49CED72785080900BC6593 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +599,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MZ6966LG77;
+				DEVELOPMENT_TEAM = GZCLMN49AS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PokePickr/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -571,6 +607,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,7 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MZ6966LG77;
+				DEVELOPMENT_TEAM = GZCLMN49AS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PokePickr/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -599,6 +636,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

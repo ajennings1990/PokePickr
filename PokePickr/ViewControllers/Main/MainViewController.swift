@@ -1,7 +1,7 @@
 import UIKit
 
 protocol MainViewControllerDelegate: AnyObject {
-  
+  func playButtonWasPressed(_ viewController: MainViewController)
 }
 
 class MainViewController: UIViewController {
@@ -47,9 +47,9 @@ class MainViewController: UIViewController {
     button.layer.borderColor = UIColor.white.cgColor
     button.layer.borderWidth = 1.0
     button.clipsToBounds = false
-//    button.configuration = .borderedProminent()
     button.layer.cornerRadius = 5.0
     button.titleLabel?.font = UIFont.systemFont(ofSize: 35, weight: .heavy)
+    button.addTarget(self, action: #selector(playButtonWasPressed), for: .touchUpInside)
     return button
   }()
   
@@ -103,7 +103,6 @@ class MainViewController: UIViewController {
       appLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
       appLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
       appLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 10),
-//      appLabel.heightAnchor.constraint(equalToConstant: 30),
       
 //      stackView.topAnchor.constraint(equalTo: appLabel.bottomAnchor, constant: 20),
       stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
@@ -113,6 +112,12 @@ class MainViewController: UIViewController {
       playButton.heightAnchor.constraint(equalToConstant: 65),
       playButton.widthAnchor.constraint(equalToConstant:  150)
     ])
+  }
+  
+  // MARK: - UI Actions
+  
+  @objc private func playButtonWasPressed() {
+    delegate?.playButtonWasPressed(self)
   }
   
 }
