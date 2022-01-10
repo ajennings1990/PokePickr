@@ -10,10 +10,10 @@ import Foundation
 
 /// Conform to this protocol to define routes to be used with `WebAPIClient`.
 public protocol Request {
-  /// https://api.icndb.com
+  /// https://pokeapi.co/api/v2
   var baseURL: String { get }
 
-  /// https://api.icndb.com **/joke**
+  /// https://pokeapi.co/api/v2 **/pokemon/400**
   var path: String? { get }
 
   /// **GET**

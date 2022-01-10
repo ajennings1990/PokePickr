@@ -30,6 +30,13 @@
 		EED09896278B4288003A9FAD /* TrainerGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */; };
 		EED09899278B42F7003A9FAD /* TrainerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */; };
 		EED0989C278B4E45003A9FAD /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */; };
+		EED098A1278B65B0003A9FAD /* TrainerGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED098A0278B65B0003A9FAD /* TrainerGameService.swift */; };
+		EED098A5278B9C00003A9FAD /* GetPokemonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED098A4278B9C00003A9FAD /* GetPokemonResponse.swift */; };
+		EED098A7278BAADA003A9FAD /* PokemonTypeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED098A6278BAADA003A9FAD /* PokemonTypeImage.swift */; };
+		EED098AA278BAD47003A9FAD /* PokemonGameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED098A9278BAD47003A9FAD /* PokemonGameInfo.swift */; };
+		EED098AD278BB513003A9FAD /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED098AC278BB513003A9FAD /* Route.swift */; };
+		EED098B1278BBD30003A9FAD /* WebAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED098B0278BBD30003A9FAD /* WebAPIClient.framework */; };
+		EED098B2278BBD30003A9FAD /* WebAPIClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EED098B0278BBD30003A9FAD /* WebAPIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,20 @@
 			remoteInfo = PokePickr;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EED098B3278BBD31003A9FAD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EED098B2278BBD30003A9FAD /* WebAPIClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EE101A452782131E005337F1 /* PokePickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokePickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +98,12 @@
 		EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameCoordinator.swift; sourceTree = "<group>"; };
 		EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameViewController.swift; sourceTree = "<group>"; };
 		EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
+		EED098A0278B65B0003A9FAD /* TrainerGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameService.swift; sourceTree = "<group>"; };
+		EED098A4278B9C00003A9FAD /* GetPokemonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonResponse.swift; sourceTree = "<group>"; };
+		EED098A6278BAADA003A9FAD /* PokemonTypeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeImage.swift; sourceTree = "<group>"; };
+		EED098A9278BAD47003A9FAD /* PokemonGameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGameInfo.swift; sourceTree = "<group>"; };
+		EED098AC278BB513003A9FAD /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		EED098B0278BBD30003A9FAD /* WebAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WebAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED098B1278BBD30003A9FAD /* WebAPIClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,10 +135,13 @@
 		EE101A3C2782131E005337F1 = {
 			isa = PBXGroup;
 			children = (
+				EED098AB278BB504003A9FAD /* Networking */,
+				EED098A2278B9ABC003A9FAD /* Models */,
 				EE101A472782131E005337F1 /* PokePickr */,
 				EE101A6127821322005337F1 /* PokePickrTests */,
 				EE101A6B27821322005337F1 /* PokePickrUITests */,
 				EE101A462782131E005337F1 /* Products */,
+				EED098AF278BBD30003A9FAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +158,8 @@
 		EE101A472782131E005337F1 /* PokePickr */ = {
 			isa = PBXGroup;
 			children = (
+				EED0989E278B64A7003A9FAD /* Repositories */,
+				EED0989D278B6457003A9FAD /* Services */,
 				EE49CEE227850C3300BC6593 /* Extensions */,
 				EE49CEDB278508B700BC6593 /* ViewControllers */,
 				EE49CED3278507D400BC6593 /* Coordinators */,
@@ -273,6 +306,63 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EED0989D278B6457003A9FAD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EED0989F278B658C003A9FAD /* TrainerGame */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EED0989E278B64A7003A9FAD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EED0989F278B658C003A9FAD /* TrainerGame */ = {
+			isa = PBXGroup;
+			children = (
+				EED098A0278B65B0003A9FAD /* TrainerGameService.swift */,
+			);
+			path = TrainerGame;
+			sourceTree = "<group>";
+		};
+		EED098A2278B9ABC003A9FAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EED098A8278BAD1F003A9FAD /* RawServerRepsonses */,
+				EED098A6278BAADA003A9FAD /* PokemonTypeImage.swift */,
+				EED098A9278BAD47003A9FAD /* PokemonGameInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EED098A8278BAD1F003A9FAD /* RawServerRepsonses */ = {
+			isa = PBXGroup;
+			children = (
+				EED098A4278B9C00003A9FAD /* GetPokemonResponse.swift */,
+			);
+			path = RawServerRepsonses;
+			sourceTree = "<group>";
+		};
+		EED098AB278BB504003A9FAD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EED098AC278BB513003A9FAD /* Route.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EED098AF278BBD30003A9FAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EED098B0278BBD30003A9FAD /* WebAPIClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,6 +373,7 @@
 				EE101A412782131E005337F1 /* Sources */,
 				EE101A422782131E005337F1 /* Frameworks */,
 				EE101A432782131E005337F1 /* Resources */,
+				EED098B3278BBD31003A9FAD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,8 +500,12 @@
 				EE101A492782131E005337F1 /* AppDelegate.swift in Sources */,
 				EED0989C278B4E45003A9FAD /* PokemonCollectionViewCell.swift in Sources */,
 				EE49CEE02785096600BC6593 /* ApplicationCoordinator+LandingCoordinator.swift in Sources */,
+				EED098AA278BAD47003A9FAD /* PokemonGameInfo.swift in Sources */,
+				EED098A5278B9C00003A9FAD /* GetPokemonResponse.swift in Sources */,
 				EE49CEEC27874C6A00BC6593 /* MainViewCoordinator.swift in Sources */,
+				EED098A7278BAADA003A9FAD /* PokemonTypeImage.swift in Sources */,
 				EE49CED02785078000BC6593 /* Coordinator.swift in Sources */,
+				EED098AD278BB513003A9FAD /* Route.swift in Sources */,
 				EE49CED2278507A700BC6593 /* TabBarRoutable.swift in Sources */,
 				EE49CEEF27874CBB00BC6593 /* MainViewController.swift in Sources */,
 				EED09899278B42F7003A9FAD /* TrainerGameViewController.swift in Sources */,
@@ -421,6 +516,7 @@
 				EE49CEDE2785090200BC6593 /* LandingViewController.swift in Sources */,
 				EED09896278B4288003A9FAD /* TrainerGameCoordinator.swift in Sources */,
 				EE49CED72785080900BC6593 /* ApplicationCoordinator.swift in Sources */,
+				EED098A1278B65B0003A9FAD /* TrainerGameService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

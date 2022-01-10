@@ -31,6 +31,7 @@ struct ResponseDecoder {
                                            data: Data) -> Result<T, APIError> {
     let result: Result<T, APIError>
     let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
     do {
       let objects = try decoder.decode(T.self, from: data)
       result = .success(objects)
