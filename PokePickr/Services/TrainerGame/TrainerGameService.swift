@@ -25,7 +25,7 @@ class DefaultTrainerGameService: TrainerGameService {
     
     pokemonInfoRepository.getPokemon(number: randomNumber) { response in
       if let serverResponse = try? response.result.get() {
-        let gameInfo = PokemonGameInfo(serverResponse: serverResponse)
+        let gameInfo = PokemonGameInfo(serverResponse: serverResponse, pokemonNumber: randomNumber)
         completion(.success(gameInfo))
       } else if case .failure(let error) = response.result {
         completion(.failure(error))

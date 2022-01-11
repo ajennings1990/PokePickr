@@ -1,7 +1,7 @@
 import UIKit
 
 protocol TrainerGameViewControllerDelegate: AnyObject {
-  
+  func viewControllerViewWillAppear(_ viewController: TrainerGameViewController)
 }
 
 class TrainerGameViewController: UIViewController {
@@ -48,6 +48,14 @@ class TrainerGameViewController: UIViewController {
   
   private weak var delegate: TrainerGameViewControllerDelegate?
   
+  // Public Members
+  
+  public lazy var pokemonInfo: [PokemonGameInfo] = [] {
+    didSet {
+      updatePokemonInfo()
+    }
+  }
+  
   // Lifecycle
   
   init(delegate: TrainerGameViewControllerDelegate) {
@@ -63,6 +71,11 @@ class TrainerGameViewController: UIViewController {
     super.viewDidLoad()
     initUI()
     makeConstraints()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    delegate?.viewControllerViewWillAppear(self)
   }
   
   // Private Methods
@@ -88,6 +101,12 @@ class TrainerGameViewController: UIViewController {
       self.collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
       self.collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
     ])
+  }
+  
+  // MARK: - Data Reloading
+  
+  private func updatePokemonInfo() {
+    collectionView.reloadData()
   }
   
   // Handle Selections
@@ -133,10 +152,16 @@ class TrainerGameViewController: UIViewController {
 extension TrainerGameViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    return collectionView.dequeueReusableCell(
+    let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: PokemonCollectionViewCell.reuseIdentifier,
       for: indexPath
-    )
+    ) as? PokemonCollectionViewCell
+    
+    if indexPath.row < pokemonInfo.count  {
+      cell?.pokemonInfo = pokemonInfo[indexPath.row]
+    }
+    
+    return cell ?? UICollectionViewCell()
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

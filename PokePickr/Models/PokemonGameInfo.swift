@@ -7,12 +7,13 @@ struct PokemonGameInfo {
   let number: String?
   let typeImages: [UIImage]?
   
-  init(serverResponse: GetPokemonResponse) {
+  init(serverResponse: GetPokemonResponse, pokemonNumber: Int) {
     self.name = serverResponse.species.name
-    self.number = "2"
-    self.typeImages = serverResponse.types.compactMap {
-      PokemonTypeImage(rawValue: $0.type.name ?? "")?.get() ?? .add
-    }
+    self.number = "\(pokemonNumber)"
+    self.typeImages = []
+//    self.typeImages = serverResponse.types.compactMap {
+//      PokemonTypeImage(rawValue: $0.type.name ?? "")?.get() ?? .add
+//    }
   }
   
 }

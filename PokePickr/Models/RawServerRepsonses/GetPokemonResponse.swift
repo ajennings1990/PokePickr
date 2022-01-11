@@ -56,7 +56,7 @@ struct GetPokemonResponse: Codable {
   // MARK: -
   
   let species: Species
-  let sprites: Sprites
-  let types: [PokemonType]
+//  let sprites: Sprites
+//  let types: [PokemonType]
   
 }

@@ -15,31 +15,20 @@ class PokemonCollectionViewCell: UICollectionViewCell {
   
   public static let reuseIdentifier = "PokemonCell"
   
+  public var pokemonInfo: PokemonGameInfo? {
+    didSet {
+      nameLabel.text = pokemonInfo?.name
+      numberLabel.text = "#\(pokemonInfo?.number ?? "000")"
+    }
+  }
+  
   // MARK: - UIComponents
   
-  private lazy var nameLabel: UILabel = {
-    let label = makeLabel(text: "Bounsweet")
-    
-    return label
-  }()
+  private lazy var nameLabel: UILabel = makeLabel(text: "")
+  private lazy var numberLabel: UILabel = makeLabel(text: "")
   
-  private lazy var numberLabel: UILabel = {
-    let label = makeLabel(text: "#761")
-    
-    return label
-  }()
-  
-  private lazy var pokemonImageView: UIImageView = {
-    let imageView = makeImageView(with: #imageLiteral(resourceName: "response"))
-    
-    return imageView
-  }()
-  
-  private lazy var typeImageView: UIImageView = {
-    let imageView = makeImageView(with: #imageLiteral(resourceName: "Grass_Type_Icon"))
-    
-    return imageView
-  }()
+  private lazy var pokemonImageView: UIImageView = makeImageView(with: #imageLiteral(resourceName: "response"))
+  private lazy var typeImageView: UIImageView = makeImageView(with: #imageLiteral(resourceName: "Grass_Type_Icon"))
   
   // MARK: - Private Members
   

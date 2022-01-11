@@ -32,7 +32,11 @@ class MainViewCoordinator: CoordinatorAutoCleanable {
 extension MainViewCoordinator: MainViewControllerDelegate {
   
   func playButtonWasPressed(_ viewController: MainViewController) {
+    let repository = DefaultPokemonInfoRepository()
+    let service = DefaultTrainerGameService(pokemonInfoRepository: repository)
+
     let coordinator = TrainerGameCoordinator(
+      trainerGameService: service,
       navigationController: navigationController,
       delegate: self
     )
