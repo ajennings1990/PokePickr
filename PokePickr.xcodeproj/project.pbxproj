@@ -135,8 +135,6 @@
 		EE101A3C2782131E005337F1 = {
 			isa = PBXGroup;
 			children = (
-				EED098AB278BB504003A9FAD /* Networking */,
-				EED098A2278B9ABC003A9FAD /* Models */,
 				EE101A472782131E005337F1 /* PokePickr */,
 				EE101A6127821322005337F1 /* PokePickrTests */,
 				EE101A6B27821322005337F1 /* PokePickrUITests */,
@@ -158,6 +156,8 @@
 		EE101A472782131E005337F1 /* PokePickr */ = {
 			isa = PBXGroup;
 			children = (
+				EED098AB278BB504003A9FAD /* Networking */,
+				EED098A2278B9ABC003A9FAD /* Models */,
 				EED0989E278B64A7003A9FAD /* Repositories */,
 				EED0989D278B6457003A9FAD /* Services */,
 				EE49CEE227850C3300BC6593 /* Extensions */,
