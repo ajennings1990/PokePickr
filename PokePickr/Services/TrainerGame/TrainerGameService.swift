@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 protocol TrainerGameService {
   func getRandomPokemon(_ completion: @escaping (Result<PokemonGameInfo, Error>) -> Void)
@@ -25,7 +26,19 @@ class DefaultTrainerGameService: TrainerGameService {
     
     pokemonInfoRepository.getPokemon(number: randomNumber) { response in
       if let serverResponse = try? response.result.get() {
-        let gameInfo = PokemonGameInfo(serverResponse: serverResponse, pokemonNumber: randomNumber)
+        
+        let url = URL(string: serverResponse.sprites.other.officialArtwork.frontDefault ?? "")
+
+//        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!)
+            let image = UIImage(data: data ?? Data())
+//        }
+        
+        let gameInfo = PokemonGameInfo(
+          name: serverResponse.species.name,
+          pokemonNumber: randomNumber,
+          image: image
+        )
         completion(.success(gameInfo))
       } else if case .failure(let error) = response.result {
         completion(.failure(error))

@@ -19,6 +19,11 @@ struct GetPokemonResponse: Codable {
     
     struct Other: Codable {
       
+      enum CodingKeys: String, CodingKey {
+        case home = "home"
+        case officialArtwork = "official-artwork"
+      }
+      
       struct Home: Codable {
         let frontDefault: String?
         let frontShiny: String?
@@ -56,7 +61,7 @@ struct GetPokemonResponse: Codable {
   // MARK: -
   
   let species: Species
-//  let sprites: Sprites
-//  let types: [PokemonType]
+  let sprites: Sprites
+  let types: [PokemonType]
   
 }

@@ -18,7 +18,8 @@ class PokemonCollectionViewCell: UICollectionViewCell {
   public var pokemonInfo: PokemonGameInfo? {
     didSet {
       nameLabel.text = pokemonInfo?.name
-      numberLabel.text = "#\(pokemonInfo?.number ?? "000")"
+      numberLabel.text = "#" + (pokemonInfo?.number ?? "000")
+      pokemonImageView.image = pokemonInfo?.pokemonImage
     }
   }
   
@@ -27,7 +28,11 @@ class PokemonCollectionViewCell: UICollectionViewCell {
   private lazy var nameLabel: UILabel = makeLabel(text: "")
   private lazy var numberLabel: UILabel = makeLabel(text: "")
   
-  private lazy var pokemonImageView: UIImageView = makeImageView(with: #imageLiteral(resourceName: "response"))
+  private lazy var pokemonImageView: UIImageView = {
+    let imageView = UIImageView()// makeImageView(with: #imageLiteral(resourceName: "response"))
+    imageView.contentMode = .scaleAspectFit
+    return imageView
+  }()
   private lazy var typeImageView: UIImageView = makeImageView(with: #imageLiteral(resourceName: "Grass_Type_Icon"))
   
   // MARK: - Private Members
