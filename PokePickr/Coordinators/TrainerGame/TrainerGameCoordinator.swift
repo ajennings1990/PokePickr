@@ -33,9 +33,21 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
     navigationController.pushViewController(trainerGameViewController, animated: true)
   }
   
-  private func loadPokemonData(_ completion: @escaping (PokemonGameInfo?) -> Void) {
-    trainerGameService.getRandomPokemon { result in
-      completion(try? result.get())
+  private func loadPokemonData(for viewController: TrainerGameViewController) {
+    viewController.pokemonInfo = []
+    
+    trainerGameService.getRandomPokemon { response in
+      guard let info = try? response.get() else { return }
+      DispatchQueue.main.async {
+        viewController.pokemonInfo.append(info)
+      }
+    }
+    
+    trainerGameService.getRandomPokemon { response in
+      guard let info = try? response.get() else { return }
+      DispatchQueue.main.async {
+        viewController.pokemonInfo.append(info)
+      }
     }
   }
   
@@ -44,19 +56,11 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
 extension TrainerGameCoordinator: TrainerGameViewControllerDelegate {
   
   func viewControllerViewWillAppear(_ viewController: TrainerGameViewController) {
-    loadPokemonData { info in
-      guard let info = info else { return }
-      DispatchQueue.main.async {
-        viewController.pokemonInfo.append(info)
-      }
-    }
-    
-    loadPokemonData { info in
-      guard let info = info else { return }
-      DispatchQueue.main.async {
-        viewController.pokemonInfo.append(info)
-      }
-    }
+    loadPokemonData(for: viewController)
+  }
+  
+  func viewControllerDidCompleteSelection(_ viewController: TrainerGameViewController) {
+    loadPokemonData(for: viewController)
   }
   
 }

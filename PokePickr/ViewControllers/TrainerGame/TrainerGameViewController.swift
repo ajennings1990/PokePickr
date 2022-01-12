@@ -2,6 +2,7 @@ import UIKit
 
 protocol TrainerGameViewControllerDelegate: AnyObject {
   func viewControllerViewWillAppear(_ viewController: TrainerGameViewController)
+  func viewControllerDidCompleteSelection(_ viewController: TrainerGameViewController)
 }
 
 class TrainerGameViewController: UIViewController {
@@ -144,7 +145,7 @@ class TrainerGameViewController: UIViewController {
   }
   
   private func animationsCompleted() {
-    
+    delegate?.viewControllerDidCompleteSelection(self)
   }
   
 }

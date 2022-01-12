@@ -28,11 +28,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
   private lazy var nameLabel: UILabel = makeLabel(text: "")
   private lazy var numberLabel: UILabel = makeLabel(text: "")
   
-  private lazy var pokemonImageView: UIImageView = {
-    let imageView = UIImageView()// makeImageView(with: #imageLiteral(resourceName: "response"))
-    imageView.contentMode = .scaleAspectFit
-    return imageView
-  }()
+  private lazy var pokemonImageView: UIImageView = makeImageView(with: nil)
   private lazy var typeImageView: UIImageView = makeImageView(with: #imageLiteral(resourceName: "Grass_Type_Icon"))
   
   // MARK: - Private Members
@@ -88,7 +84,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     ])
   }
   
-  private func makeImageView(with image: UIImage) -> UIImageView {
+  private func makeImageView(with image: UIImage?) -> UIImageView {
     let imageView = UIImageView(image: image)
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.contentMode = .scaleAspectFit
