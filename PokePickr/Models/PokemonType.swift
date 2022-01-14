@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum PokemonTypeImage: String, Codable {
+enum PokemonType: String, CaseIterable, Codable {
   case Normal
   case Fighting
   case Flying
@@ -28,11 +28,15 @@ enum PokemonTypeImage: String, Codable {
   case Dark
   case Fairy
   
-  func get() -> UIImage {
-    switch self {
-    case .Grass: return #imageLiteral(resourceName: "Grass_Type_Icon")
-    default:
-      return UIImage.add
-    }
+  func getImage() -> UIImage {
+    UIImage(named: self.rawValue) ?? .add
   }
+}
+
+extension CaseIterable where Self: Equatable {
+
+    var index: Self.AllCases.Index? {
+        return Self.allCases.firstIndex { self == $0 }
+    }
+  
 }

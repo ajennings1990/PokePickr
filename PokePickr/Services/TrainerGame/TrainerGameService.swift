@@ -37,22 +37,18 @@ class DefaultTrainerGameService: TrainerGameService {
         let gameInfo = PokemonGameInfo(
           name: serverResponse.species.name,
           pokemonNumber: randomNumber,
-          image: image
+          image: image,
+          types: serverResponse.types.compactMap {
+            PokemonType(rawValue: $0.type.name?.capitalized ?? "")
+          }
         )
+
         completion(.success(gameInfo))
       } else if case .failure(let error) = response.result {
         completion(.failure(error))
       } else {
         completion(.failure(APIError.notReachable))
       }
-    }
-  }
-  
-  private func handleErrorResult<T>(result: Result<T, APIError>) -> Error {
-    if case let .failure(error) = result {
-      return error
-    } else {
-      return APIError.notReachable
     }
   }
   

@@ -6,16 +6,13 @@ struct PokemonGameInfo {
   let name: String?
   let number: String
   let pokemonImage: UIImage?
-  let typeImages: [UIImage]?
+  let types: [PokemonType]?
   
-  init(name: String?, pokemonNumber: Int, image: UIImage?) {
+  init(name: String?, pokemonNumber: Int, image: UIImage?, types: [PokemonType]) {
     self.name = name
     self.number = "\(pokemonNumber)"
     self.pokemonImage = image
-    self.typeImages = []
-//    self.typeImages = serverResponse.types.compactMap {
-//      PokemonTypeImage(rawValue: $0.type.name ?? "")?.get() ?? .add
-//    }
+    self.types = types
   }
   
 }

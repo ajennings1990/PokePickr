@@ -47,7 +47,7 @@ struct GetPokemonResponse: Codable {
   
   // MARK: -
 
-  struct PokemonType: Codable {
+  struct SpeciesType: Codable {
     
     struct `Type`: Codable {
       let name: String?
@@ -62,6 +62,6 @@ struct GetPokemonResponse: Codable {
   
   let species: Species
   let sprites: Sprites
-  let types: [PokemonType]
+  let types: [SpeciesType]
   
 }

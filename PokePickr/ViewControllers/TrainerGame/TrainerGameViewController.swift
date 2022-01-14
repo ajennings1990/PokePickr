@@ -47,6 +47,7 @@ class TrainerGameViewController: UIViewController {
   
   // private lazy var selections = [Pokemon]() <-- pass individual selections to coordinator or as Array ???
   
+  private var isAnimating = false
   private weak var delegate: TrainerGameViewControllerDelegate?
   
   // Public Members
@@ -107,12 +108,16 @@ class TrainerGameViewController: UIViewController {
   // MARK: - Data Reloading
   
   private func updatePokemonInfo() {
+    guard isAnimating == false else { return }
     collectionView.reloadData()
   }
   
   // Handle Selections
   
   private func handleSelection(_ indexPath: IndexPath, on collectionView: UICollectionView) {
+    isAnimating = true
+    delegate?.viewControllerDidCompleteSelection(self)
+    
     let selectedCell = collectionView.cellForItem(at: indexPath)
     
     var otherCell: UICollectionViewCell?
@@ -145,7 +150,8 @@ class TrainerGameViewController: UIViewController {
   }
   
   private func animationsCompleted() {
-    delegate?.viewControllerDidCompleteSelection(self)
+    isAnimating = false
+    updatePokemonInfo()
   }
   
 }

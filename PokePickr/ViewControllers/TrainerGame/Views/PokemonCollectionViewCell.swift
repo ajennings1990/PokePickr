@@ -20,6 +20,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
       nameLabel.text = pokemonInfo?.name
       numberLabel.text = "#" + (pokemonInfo?.number ?? "000")
       pokemonImageView.image = pokemonInfo?.pokemonImage
+      configureTypeImageViews()
     }
   }
   
@@ -28,8 +29,16 @@ class PokemonCollectionViewCell: UICollectionViewCell {
   private lazy var nameLabel: UILabel = makeLabel(text: "")
   private lazy var numberLabel: UILabel = makeLabel(text: "")
   
+  private lazy var typesStackView: UIStackView = {
+    let stackView = UIStackView()
+    stackView.distribution = .fillEqually
+    stackView.axis = .horizontal
+    stackView.spacing = 5
+    return stackView
+  }()
+  
   private lazy var pokemonImageView: UIImageView = makeImageView(with: nil)
-  private lazy var typeImageView: UIImageView = makeImageView(with: #imageLiteral(resourceName: "Grass_Type_Icon"))
+  private lazy var typeImageView: UIImageView = makeImageView(with: nil)
   
   // MARK: - Private Members
   
@@ -47,6 +56,10 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
+  override func prepareForReuse() {
+    typesStackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
+  }
+  
   // MARK: - Private Methods
   
   private func initUI() {
@@ -54,7 +67,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     layer.cornerRadius = 5.0
     layer.masksToBounds = true
     
-    [nameLabel, numberLabel, typeImageView, pokemonImageView].forEach {
+    [nameLabel, numberLabel, typesStackView, pokemonImageView].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       addSubview($0)
     }
@@ -71,11 +84,11 @@ class PokemonCollectionViewCell: UICollectionViewCell {
       numberLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
       numberLabel.heightAnchor.constraint(equalToConstant: 20),
       
-      typeImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-      typeImageView.leftAnchor.constraint(equalTo: nameLabel.rightAnchor, constant: 10),
-      typeImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-      typeImageView.heightAnchor.constraint(equalToConstant: 20),
-      typeImageView.widthAnchor.constraint(equalToConstant: 20),
+      typesStackView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+      typesStackView.leftAnchor.constraint(equalTo: nameLabel.rightAnchor, constant: 10),
+      typesStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
+      typesStackView.heightAnchor.constraint(equalToConstant: 20),
+      typesStackView.widthAnchor.constraint(lessThanOrEqualToConstant: 40),
       
       pokemonImageView.topAnchor.constraint(equalTo: numberLabel.bottomAnchor, constant: 10),
       pokemonImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
@@ -83,6 +96,19 @@ class PokemonCollectionViewCell: UICollectionViewCell {
       pokemonImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
     ])
   }
+  
+  // MARK: - Pokemon Type Setup
+  
+  
+  private func configureTypeImageViews() {
+    pokemonInfo?.types?.forEach { type in
+      let imageView = makeImageView(with: type.getImage())
+      typesStackView.addArrangedSubview(imageView)
+    }
+  }
+  
+  
+  // MARK: - Constructors
   
   private func makeImageView(with image: UIImage?) -> UIImageView {
     let imageView = UIImageView(image: image)
