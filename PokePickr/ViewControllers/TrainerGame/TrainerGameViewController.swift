@@ -2,7 +2,7 @@ import UIKit
 
 protocol TrainerGameViewControllerDelegate: AnyObject {
   func viewControllerViewWillAppear(_ viewController: TrainerGameViewController)
-  func viewControllerDidCompleteSelection(_ viewController: TrainerGameViewController)
+  func viewControllerDidMakeSelection(_ viewController: TrainerGameViewController, selection: PokemonGameInfo)
 }
 
 class TrainerGameViewController: UIViewController {
@@ -93,7 +93,7 @@ class TrainerGameViewController: UIViewController {
   
   private func makeConstraints() {
     NSLayoutConstraint.activate([
-      self.titleLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 50),
+      self.titleLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 100),
       self.titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
       self.titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor),
       self.titleLabel.heightAnchor.constraint(equalToConstant: 30),
@@ -116,7 +116,7 @@ class TrainerGameViewController: UIViewController {
   
   private func handleSelection(_ indexPath: IndexPath, on collectionView: UICollectionView) {
     isAnimating = true
-    delegate?.viewControllerDidCompleteSelection(self)
+    delegate?.viewControllerDidMakeSelection(self, selection: pokemonInfo[indexPath.row])
     
     let selectedCell = collectionView.cellForItem(at: indexPath)
     

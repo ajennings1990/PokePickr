@@ -36,6 +36,7 @@ extension MainViewCoordinator: MainViewControllerDelegate {
     let service = DefaultTrainerGameService(pokemonInfoRepository: repository)
 
     let coordinator = TrainerGameCoordinator(
+      selectionTotal: 10,
       trainerGameService: service,
       navigationController: navigationController,
       delegate: self
