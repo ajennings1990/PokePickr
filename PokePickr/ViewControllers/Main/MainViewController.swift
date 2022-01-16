@@ -102,7 +102,7 @@ class MainViewController: UIViewController {
     NSLayoutConstraint.activate([
       appLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
       appLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
-      appLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 10),
+      appLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
       
       stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
       stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),

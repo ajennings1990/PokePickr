@@ -55,15 +55,17 @@ class LandingViewController: UIViewController {
   
   private func makeConstraints() {
     NSLayoutConstraint.activate([
-      appLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
-      appLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 10),
+      appLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+      appLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
     ])
     verticalConstraint = appLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
     verticalConstraint?.isActive = true
   }
   
   private func beginAnimations() {
-    animateLabel()
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+      self.animateLabel()
+    }
   }
   
   private func animateLabel() {
