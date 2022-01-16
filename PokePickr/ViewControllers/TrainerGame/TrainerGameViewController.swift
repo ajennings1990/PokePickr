@@ -44,9 +44,7 @@ class TrainerGameViewController: UIViewController {
     bottom: 50.0,
     right: 20.0
   )
-  
-  // private lazy var selections = [Pokemon]() <-- pass individual selections to coordinator or as Array ???
-  
+    
   private var isAnimating = false
   private weak var delegate: TrainerGameViewControllerDelegate?
   
@@ -105,6 +103,7 @@ class TrainerGameViewController: UIViewController {
   
   public func updatePokemonInfo(_ info: PokemonGameInfo) {
     pokemonInfo.append(info)
+    collectionView.isUserInteractionEnabled = pokemonInfo.count == 2
     
     guard isAnimating == false else { return }
     collectionView.reloadData()
@@ -117,13 +116,7 @@ class TrainerGameViewController: UIViewController {
     delegate?.viewControllerDidMakeSelection(self, selection: pokemonInfo[indexPath.row])
     
     let selectedCell = collectionView.cellForItem(at: indexPath)
-    
-    var otherCell: UICollectionViewCell?
-    if indexPath.row == 1 {
-      otherCell = collectionView.cellForItem(at: IndexPath(item: 0, section: 0))
-    } else {
-      otherCell = collectionView.cellForItem(at: IndexPath(item: 1, section: 0))
-    }
+    let otherCell = collectionView.cellForItem(at: IndexPath(item: indexPath.row == 0 ? 1 : 0, section: 0))
     
     guard let selectedCell = selectedCell, let otherCell = otherCell  else {
       animationsCompleted()
@@ -178,11 +171,8 @@ extension TrainerGameViewController: UICollectionViewDataSource {
 extension TrainerGameViewController: UICollectionViewDelegate {
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    collectionView.isUserInteractionEnabled = false
     handleSelection(indexPath, on: collectionView)
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-    
   }
   
 }
