@@ -122,7 +122,10 @@ class TrainerGameViewController: UIViewController {
       animationsCompleted()
       return
     }
-
+    
+    (selectedCell as? PokemonCollectionViewCell)?.isLoading = true
+    (otherCell as? PokemonCollectionViewCell)?.isLoading = true
+    
     animateCells(selectedCell, otherCell)
   }
   

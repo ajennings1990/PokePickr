@@ -17,10 +17,18 @@ class PokemonCollectionViewCell: UICollectionViewCell {
   
   public var pokemonInfo: PokemonGameInfo? {
     didSet {
+      isLoading = false
       nameLabel.text = pokemonInfo?.name
       numberLabel.text = "#" + (pokemonInfo?.number ?? "000")
       pokemonImageView.image = pokemonInfo?.pokemonImage
       configureTypeImageViews()
+    }
+  }
+  
+  public lazy var isLoading: Bool = true {
+    didSet {
+      isLoading ? loadingSpinner.startAnimating() : loadingSpinner.stopAnimating()
+      loadingSpinner.isHidden = !isLoading
     }
   }
   
@@ -37,6 +45,12 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     return stackView
   }()
   
+  private lazy var loadingSpinner: UIActivityIndicatorView = {
+    let spinner = UIActivityIndicatorView(style: .medium)
+    spinner.color = .mainBlue
+    return spinner
+  }()
+  
   private lazy var pokemonImageView: UIImageView = makeImageView(with: nil)
   private lazy var typeImageView: UIImageView = makeImageView(with: nil)
     
@@ -46,6 +60,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     super.init(frame: frame)
     initUI()
     makeConstraints()
+    isLoading = true
   }
   
   required init?(coder: NSCoder) {
@@ -63,14 +78,18 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     layer.cornerRadius = 5.0
     layer.masksToBounds = true
     
-    [nameLabel, numberLabel, typesStackView, pokemonImageView].forEach {
+    [loadingSpinner, nameLabel, numberLabel, typesStackView, pokemonImageView].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       addSubview($0)
     }
+    bringSubviewToFront(loadingSpinner)
   }
   
   private func makeConstraints() {
     NSLayoutConstraint.activate([
+      loadingSpinner.centerXAnchor.constraint(equalTo: centerXAnchor),
+      loadingSpinner.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+      
       nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
       nameLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
       nameLabel.heightAnchor.constraint(equalToConstant: 20),
