@@ -91,7 +91,7 @@ class MainViewController: UIViewController {
     stackView.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(stackView)
     
-    [titleLabel, playButton, settingsButton].forEach {
+    [titleLabel, playButton].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       stackView.addArrangedSubview($0)
     }
