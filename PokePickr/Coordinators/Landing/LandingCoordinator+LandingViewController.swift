@@ -1,10 +1,3 @@
-//
-//  LandingCoordinator+LandingViewController.swift
-//  PokePickr
-//
-//  Created by Andrew Jennings on 06/01/2022.
-//
-
 import Foundation
 
 extension LandingCoordinator: LandingViewControllerDelegate {

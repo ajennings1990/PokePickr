@@ -4,10 +4,7 @@ import WebAPIClient
 
 /// Mapping of Raw JSON Response from Server
 struct GetPokemonResponse: Codable {
-
-  /// General information about a Pokemon
-  /// - name : String --- The Name of the Pokemon
-  /// - url : String --- The Url String used to fetch info about this pokemon
+  
   struct Species: Codable {
     let name: String
     let url: String

@@ -1,7 +1,7 @@
 import UIKit
 
 protocol TrainerGameCoordinatorDelegate: AnyObject {
-  func trainerGameCoordinatorCompleted(_ coordinator: MainViewCoordinator)
+  func trainerGameCoordinatorCompleted(_ coordinator: TrainerGameCoordinator)
 }
 
 class TrainerGameCoordinator: CoordinatorAutoCleanable {
@@ -11,13 +11,11 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
   var children: [String: Coordinator] = [:]
   weak var delegate: TrainerGameCoordinatorDelegate?
   let navigationController: UINavigationController
+ 
+  let selectionTotal: Int
+  lazy var selections: [PokemonGameInfo] = []
   
-  // MARK: - Private Members
-  
-  private lazy var selections: [PokemonGameInfo] = []
-  
-  private let selectionTotal: Int
-  private let trainerGameService: TrainerGameService
+  let trainerGameService: TrainerGameService
   
   // MARK: - Lifecycle
 
@@ -40,7 +38,7 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
   
   // MARK: - Game State Handlers
   
-  private func loadPokemonData(for viewController: TrainerGameViewController) {
+  func loadPokemonData(for viewController: TrainerGameViewController) {
     viewController.pokemonInfo = []
     
     Task(priority: .userInitiated, operation: {
@@ -67,7 +65,7 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
   
   // MARK: - Result Handlers
   
-  private func calculateResult(for viewController: TrainerGameViewController) {
+  func calculateResult(for viewController: TrainerGameViewController) {
     let loadingAlert = UIAlertController(title: "Calculating Result...", message: nil, preferredStyle: .alert)
     viewController.present(loadingAlert, animated: true, completion: nil)
     
@@ -77,34 +75,20 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
     let counts = allTypes.reduce(into: [:]) { $0[$1, default: 0] += 1 }
     let finalType = counts.first(where: { $0.value == counts.values.max() })?.key
 
-    loadingAlert.dismiss(animated: true) { [weak navigationController] in
+    loadingAlert.dismiss(animated: true) {
       let resultAlert = UIAlertController(
         title: "Result",
         message: "\nYour specialist type is \(finalType?.rawValue ?? "")\n",
         preferredStyle: .alert
       )
-      resultAlert.addAction(.init(title: "Ok", style: .default, handler: { action in
-        navigationController?.popToRootViewController(animated: true)
+      resultAlert.addAction(.init(title: "Ok", style: .default, handler: { [weak self] _ in
+        self?.resultCompleted()
       }))
       viewController.present(resultAlert, animated: true, completion: nil)
     }
   }
   
-}
-
-extension TrainerGameCoordinator: TrainerGameViewControllerDelegate {
-  
-  func viewControllerViewWillAppear(_ viewController: TrainerGameViewController) {
-    loadPokemonData(for: viewController)
+  private func resultCompleted() {
+    delegate?.trainerGameCoordinatorCompleted(self)
   }
-  
-  func viewControllerDidMakeSelection(_ viewController: TrainerGameViewController, selection: PokemonGameInfo) {
-    guard selections.count < selectionTotal - 1 else {
-      calculateResult(for: viewController)
-      return
-    }
-    selections.append(selection)
-    loadPokemonData(for: viewController)
-  }
-  
 }

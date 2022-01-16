@@ -1,6 +1,8 @@
 import Foundation
 import UIKit
 
+import WebAPIClient
+
 protocol TrainerGameService {
   func getRandomPokemon() async -> Result<PokemonGameInfo, Error>
   //  func getTypeInfo(_ type: PokemonType)
@@ -51,22 +53,6 @@ class DefaultTrainerGameService: TrainerGameService {
       types: types
     )
     return .success(gameInfo)
-  }
-  
-}
-
-import WebAPIClient
-
-protocol PokemonInfoRepository {
-  func getPokemon(number: Int) async -> APIResponse<GetPokemonResponse>
-}
-
-class DefaultPokemonInfoRepository: PokemonInfoRepository {
-  
-  // MARK: - PokemonInfoRepository
-  
-  func getPokemon(number: Int) async -> APIResponse<GetPokemonResponse> {
-    await WebAPIClient.send(Route.getPokemonInfo(number: number))
   }
   
 }

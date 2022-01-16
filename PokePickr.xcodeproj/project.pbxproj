@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE041CA92793B0E5003AB6F2 /* TrainerGameCoordinator+TrainerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE041CA82793B0E5003AB6F2 /* TrainerGameCoordinator+TrainerGameViewController.swift */; };
+		EE041CAB2793B1E4003AB6F2 /* PokemonInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE041CAA2793B1E4003AB6F2 /* PokemonInfoRepository.swift */; };
+		EE041CAD2793B54C003AB6F2 /* MainViewCoordinator+TrainerGameCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE041CAC2793B54C003AB6F2 /* MainViewCoordinator+TrainerGameCoordinatorDelegate.swift */; };
+		EE041CAF2793B702003AB6F2 /* MainViewCoordinatoor+MainViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE041CAE2793B702003AB6F2 /* MainViewCoordinatoor+MainViewControllerDelegate.swift */; };
 		EE101A492782131E005337F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A482782131E005337F1 /* AppDelegate.swift */; };
 		EE101A4B2782131E005337F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A4A2782131E005337F1 /* SceneDelegate.swift */; };
 		EE101A4D2782131E005337F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A4C2782131E005337F1 /* ViewController.swift */; };
@@ -71,6 +75,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EE041CA82793B0E5003AB6F2 /* TrainerGameCoordinator+TrainerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainerGameCoordinator+TrainerGameViewController.swift"; sourceTree = "<group>"; };
+		EE041CAA2793B1E4003AB6F2 /* PokemonInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoRepository.swift; sourceTree = "<group>"; };
+		EE041CAC2793B54C003AB6F2 /* MainViewCoordinator+TrainerGameCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewCoordinator+TrainerGameCoordinatorDelegate.swift"; sourceTree = "<group>"; };
+		EE041CAE2793B702003AB6F2 /* MainViewCoordinatoor+MainViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewCoordinatoor+MainViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		EE101A452782131E005337F1 /* PokePickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokePickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE101A482782131E005337F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE101A4A2782131E005337F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -269,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				EE49CEEB27874C6A00BC6593 /* MainViewCoordinator.swift */,
+				EE041CAE2793B702003AB6F2 /* MainViewCoordinatoor+MainViewControllerDelegate.swift */,
+				EE041CAC2793B54C003AB6F2 /* MainViewCoordinator+TrainerGameCoordinatorDelegate.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -285,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */,
+				EE041CA82793B0E5003AB6F2 /* TrainerGameCoordinator+TrainerGameViewController.swift */,
 			);
 			path = TrainerGame;
 			sourceTree = "<group>";
@@ -317,6 +328,7 @@
 		EED0989E278B64A7003A9FAD /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				EE041CAA2793B1E4003AB6F2 /* PokemonInfoRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -495,10 +507,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE041CAD2793B54C003AB6F2 /* MainViewCoordinator+TrainerGameCoordinatorDelegate.swift in Sources */,
 				EE101A4D2782131E005337F1 /* ViewController.swift in Sources */,
 				EE49CEE7278738AF00BC6593 /* LandingCoordinator+LandingViewController.swift in Sources */,
 				EE101A492782131E005337F1 /* AppDelegate.swift in Sources */,
+				EE041CAB2793B1E4003AB6F2 /* PokemonInfoRepository.swift in Sources */,
 				EED0989C278B4E45003A9FAD /* PokemonCollectionViewCell.swift in Sources */,
+				EE041CA92793B0E5003AB6F2 /* TrainerGameCoordinator+TrainerGameViewController.swift in Sources */,
 				EE49CEE02785096600BC6593 /* ApplicationCoordinator+LandingCoordinator.swift in Sources */,
 				EED098AA278BAD47003A9FAD /* PokemonGameInfo.swift in Sources */,
 				EED098A5278B9C00003A9FAD /* GetPokemonResponse.swift in Sources */,
@@ -513,6 +528,7 @@
 				EE101A532782131E005337F1 /* PokePickr.xcdatamodeld in Sources */,
 				EE101A4B2782131E005337F1 /* SceneDelegate.swift in Sources */,
 				EE49CEE427850C3F00BC6593 /* UIColor+Extensions.swift in Sources */,
+				EE041CAF2793B702003AB6F2 /* MainViewCoordinatoor+MainViewControllerDelegate.swift in Sources */,
 				EE49CEDE2785090200BC6593 /* LandingViewController.swift in Sources */,
 				EED09896278B4288003A9FAD /* TrainerGameCoordinator.swift in Sources */,
 				EE49CED72785080900BC6593 /* ApplicationCoordinator.swift in Sources */,

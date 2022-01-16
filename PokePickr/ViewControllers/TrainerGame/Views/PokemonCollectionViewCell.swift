@@ -39,11 +39,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
   
   private lazy var pokemonImageView: UIImageView = makeImageView(with: nil)
   private lazy var typeImageView: UIImageView = makeImageView(with: nil)
-  
-  // MARK: - Private Members
-  
-  
-  
+    
   // MARK: - Lifecycle
   
   override init(frame: CGRect) {
@@ -99,14 +95,12 @@ class PokemonCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Pokemon Type Setup
   
-  
   private func configureTypeImageViews() {
     pokemonInfo?.types?.forEach { type in
       let imageView = makeImageView(with: type.getImage())
       typesStackView.addArrangedSubview(imageView)
     }
   }
-  
   
   // MARK: - Constructors
   

@@ -104,7 +104,6 @@ class MainViewController: UIViewController {
       appLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
       appLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 10),
       
-//      stackView.topAnchor.constraint(equalTo: appLabel.bottomAnchor, constant: 20),
       stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
       stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
       stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
