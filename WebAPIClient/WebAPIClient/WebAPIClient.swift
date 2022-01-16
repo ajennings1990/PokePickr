@@ -13,47 +13,69 @@ public class WebAPIClient: NSObject {
   
   internal static let urlBuilder: URLRequestBuilder = URLRequestBuilder()
   internal static var responseDecoder: ResponseDecoder = ResponseDecoder()
-
+  
   /**
    Performs a network request expecting a object value response.
    
    - parameter request: The route with which to build the request.
    - parameter completion: Closure to execute when the network request is complete.
    */
-  public static func send<T: Decodable>(_ request: Request,
-                                        completion: @escaping (APIResponse<T>) -> Void) {
-    send(request) { (response: APIResponse<Data>) in
-      let returnableResponse: APIResponse<T> = self.responseDecoder.decode(request: request,
-                                                                           response: response)
-      completion(returnableResponse)
-    }
+  public static func send<T: Decodable>(
+    _ request: Request
+  ) async -> APIResponse<T> {
+    let response = await send(request)
+    let returnableResponse: APIResponse<T> = responseDecoder.decode(request: request, response: response)
+    return returnableResponse
   }
   
-  private static func send(_ request: Request,
-                           completion: @escaping (APIResponse<Data>) -> Void) {
+  private static func send(
+    _ request: Request
+  ) async -> APIResponse<Data> {
     do {
       // add Reachability checks here
       let urlRequest = try urlBuilder.buildURLRequest(request: request)
-      return perform(urlRequest: urlRequest) { response in
-        let apiResponse = response.toAPIResponse()
-        completion(apiResponse)
-      }
+      let response = await perform(urlRequest: urlRequest)
+      let apiResponse = response.toAPIResponse()
+      return apiResponse
     } catch let error as APIError {
-      completion(APIResponse(result: .failure(error)))
+      return APIResponse(result: .failure(error))
     } catch {
-      completion(APIResponse(result: .failure(.unknown(error))))
+      return APIResponse(result: .failure(.unknown(error)))
     }
   }
   
-  private static func perform(urlRequest: URLRequest,
-                              completion: @escaping (RESTResponse) -> Void) {
-    let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-      completion(restResponse(request: urlRequest,
-                              data: data,
-                              response: response,
-                              error: error))
+  private static func perform(
+    urlRequest: URLRequest
+  ) async -> RESTResponse {
+    var dataResponse: (Data, URLResponse)
+    
+    do {
+      if #available(iOS 15.0, *) {
+        dataResponse = try await URLSession.shared.data(for: urlRequest, delegate: nil)
+      } else {
+        dataResponse = try await WebAPIClient.performLegacy(urlRequest: urlRequest)
+      }
+      return restResponse(request: urlRequest, data: dataResponse.0, response: dataResponse.1, error: nil)
     }
-    task.resume()
+    catch {
+      return restResponse(request: urlRequest, data: nil, response: nil, error: APIError.invalidURL)
+    }
+  }
+  
+  @available(iOS, deprecated: 15.0, message: "This extension is no longer necessary. Use API built into SDK")
+  static func performLegacy(urlRequest: URLRequest) async throws -> (Data, URLResponse) {
+    try await withCheckedThrowingContinuation { continuation in
+      let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+        guard let data = data, let response = response else {
+          let error = error ?? URLError(.badServerResponse)
+          return continuation.resume(throwing: error)
+        }
+        
+        continuation.resume(returning: (data, response))
+      }
+      
+      task.resume()
+    }
   }
   
   private static func restResponse(request: URLRequest,
@@ -71,6 +93,6 @@ public class WebAPIClient: NSObject {
                         data: data,
                         result: result)
   }
-
+  
   
 }

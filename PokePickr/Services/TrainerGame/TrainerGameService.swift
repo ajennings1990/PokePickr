@@ -2,16 +2,15 @@ import Foundation
 import UIKit
 
 protocol TrainerGameService {
-  func getRandomPokemon(_ completion: @escaping (Result<PokemonGameInfo, Error>) -> Void)
-//  func getTypeInfo(_ type: PokemonType)
+  func getRandomPokemon() async -> Result<PokemonGameInfo, Error>
+  //  func getTypeInfo(_ type: PokemonType)
 }
 
 class DefaultTrainerGameService: TrainerGameService {
   
   // MARK: - Private Members
   
-   private let pokemonInfoRepository: PokemonInfoRepository
-  // private let imageRepository: ImageRepository
+  private let pokemonInfoRepository: PokemonInfoRepository
   
   // MARK: - Lifecycle
   
@@ -21,35 +20,37 @@ class DefaultTrainerGameService: TrainerGameService {
   
   // MARK: - TrainerGameService
   
-  func getRandomPokemon(_ completion: @escaping (Result<PokemonGameInfo, Error>) -> Void) {
+  func getRandomPokemon() async -> Result<PokemonGameInfo, Error> {
     let randomNumber = Int.random(in: 1...898)
+    let response = await pokemonInfoRepository.getPokemon(number: randomNumber)
     
-    pokemonInfoRepository.getPokemon(number: randomNumber) { response in
-      if let serverResponse = try? response.result.get() {
-        
-        let url = URL(string: serverResponse.sprites.other.officialArtwork.frontDefault ?? "")
-
-//        DispatchQueue.global().async {
-            let data = try? Data(contentsOf: url!)
-            let image = UIImage(data: data ?? Data())
-//        }
-        
-        let gameInfo = PokemonGameInfo(
-          name: serverResponse.species.name,
-          pokemonNumber: randomNumber,
-          image: image,
-          types: serverResponse.types.compactMap {
-            PokemonType(rawValue: $0.type.name?.capitalized ?? "")
-          }
-        )
-
-        completion(.success(gameInfo))
-      } else if case .failure(let error) = response.result {
-        completion(.failure(error))
-      } else {
-        completion(.failure(APIError.notReachable))
-      }
+    if let serverResponse = try? response.result.get() {
+      return await handleSuccessResponse(serverResponse, pokemonNumber: randomNumber)
+    } else if case .failure(let error) = response.result {
+      return .failure(error)
+    } else {
+      return .failure(APIError.notReachable)
     }
+  }
+  
+  private func handleSuccessResponse(_ response: GetPokemonResponse, pokemonNumber: Int) async -> Result<PokemonGameInfo, Error> {
+    guard let url = URL(string: response.sprites.other.officialArtwork.frontDefault ?? "") else {
+      return .failure(APIError.serialization)
+    }
+    
+    async let data = try? Data(contentsOf: url)
+    let image = await UIImage(data: data ?? Data())
+    let types = response.types.compactMap {
+      PokemonType(rawValue: $0.type.name?.capitalized ?? "")
+    }
+    
+    let gameInfo = PokemonGameInfo(
+      name: response.species.name,
+      pokemonNumber: pokemonNumber,
+      image: image,
+      types: types
+    )
+    return .success(gameInfo)
   }
   
 }
@@ -57,18 +58,15 @@ class DefaultTrainerGameService: TrainerGameService {
 import WebAPIClient
 
 protocol PokemonInfoRepository {
-  func getPokemon(number: Int, completion: @escaping (APIResponse<GetPokemonResponse>) -> Void)
+  func getPokemon(number: Int) async -> APIResponse<GetPokemonResponse>
 }
 
 class DefaultPokemonInfoRepository: PokemonInfoRepository {
   
   // MARK: - PokemonInfoRepository
   
-  func getPokemon(number: Int, completion: @escaping (APIResponse<GetPokemonResponse>) -> Void) {
-    WebAPIClient.send(
-      Route.getPokemonInfo(number: number),
-      completion: completion
-    )
+  func getPokemon(number: Int) async -> APIResponse<GetPokemonResponse> {
+    await WebAPIClient.send(Route.getPokemonInfo(number: number))
   }
   
 }

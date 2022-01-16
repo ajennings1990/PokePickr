@@ -43,20 +43,29 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
   private func loadPokemonData(for viewController: TrainerGameViewController) {
     viewController.pokemonInfo = []
     
-    trainerGameService.getRandomPokemon { response in
-      guard let info = try? response.get() else { return }
-      DispatchQueue.main.async {
-        viewController.pokemonInfo.append(info)
+    Task(priority: .userInitiated, operation: {
+      let firstResponse = await trainerGameService.getRandomPokemon()
+      let firstInfo = try? firstResponse.get()
+      
+      let secondResponse = await trainerGameService.getRandomPokemon()
+      let secondInfo = try? secondResponse.get()
+      
+      if let firstInfo = firstInfo {
+        updateUI(on: viewController, with: firstInfo)
       }
-    }
-    
-    trainerGameService.getRandomPokemon { response in
-      guard let info = try? response.get() else { return }
-      DispatchQueue.main.async {
-        viewController.pokemonInfo.append(info)
+      if let secondInfo = secondInfo {
+        updateUI(on: viewController, with: secondInfo)
       }
+    })
+  }
+  
+  private func updateUI(on viewController: TrainerGameViewController, with info: PokemonGameInfo) {
+    DispatchQueue.main.async {
+      viewController.updatePokemonInfo(info)
     }
   }
+  
+  // MARK: - Result Handlers
   
   private func calculateResult(for viewController: TrainerGameViewController) {
     let loadingAlert = UIAlertController(title: "Calculating Result...", message: nil, preferredStyle: .alert)

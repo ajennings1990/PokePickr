@@ -52,11 +52,7 @@ class TrainerGameViewController: UIViewController {
   
   // Public Members
   
-  public lazy var pokemonInfo: [PokemonGameInfo] = [] {
-    didSet {
-      updatePokemonInfo()
-    }
-  }
+  public lazy var pokemonInfo: [PokemonGameInfo] = []
   
   // Lifecycle
   
@@ -105,9 +101,11 @@ class TrainerGameViewController: UIViewController {
     ])
   }
   
-  // MARK: - Data Reloading
+  // MARK: - Public Data Reloading
   
-  private func updatePokemonInfo() {
+  public func updatePokemonInfo(_ info: PokemonGameInfo) {
+    pokemonInfo.append(info)
+    
     guard isAnimating == false else { return }
     collectionView.reloadData()
   }
@@ -151,7 +149,7 @@ class TrainerGameViewController: UIViewController {
   
   private func animationsCompleted() {
     isAnimating = false
-    updatePokemonInfo()
+    collectionView.reloadData()
   }
   
 }
