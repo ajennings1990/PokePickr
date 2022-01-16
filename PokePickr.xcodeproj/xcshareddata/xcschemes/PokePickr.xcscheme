@@ -48,6 +48,16 @@
                ReferencedContainer = "container:PokePickr.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA34CC3A2386D0AC00DC7027"
+               BuildableName = "WebAPIClientTests.xctest"
+               BlueprintName = "WebAPIClientTests"
+               ReferencedContainer = "container:WebAPIClient/WebAPIClient.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

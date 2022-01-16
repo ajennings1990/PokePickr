@@ -3,7 +3,7 @@ import Foundation
 import WebAPIClient
 
 /// Mapping of Raw JSON Response from Server
-struct GetPokemonResponse: Codable {
+public struct GetPokemonResponse: Codable {
   
   struct Species: Codable {
     let name: String

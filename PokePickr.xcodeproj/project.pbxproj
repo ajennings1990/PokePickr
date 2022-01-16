@@ -18,7 +18,7 @@
 		EE101A532782131E005337F1 /* PokePickr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE101A512782131E005337F1 /* PokePickr.xcdatamodeld */; };
 		EE101A5527821322005337F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE101A5427821322005337F1 /* Assets.xcassets */; };
 		EE101A5827821322005337F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE101A5627821322005337F1 /* LaunchScreen.storyboard */; };
-		EE101A6327821322005337F1 /* PokePickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6227821322005337F1 /* PokePickrTests.swift */; };
+		EE101A6327821322005337F1 /* TrainerGameServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6227821322005337F1 /* TrainerGameServiceTests.swift */; };
 		EE101A6D27821322005337F1 /* PokePickrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6C27821322005337F1 /* PokePickrUITests.swift */; };
 		EE101A6F27821322005337F1 /* PokePickrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE101A6E27821322005337F1 /* PokePickrUITestsLaunchTests.swift */; };
 		EE49CED02785078000BC6593 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CECF2785078000BC6593 /* Coordinator.swift */; };
@@ -89,7 +89,7 @@
 		EE101A5727821322005337F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE101A5927821322005337F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE101A5E27821322005337F1 /* PokePickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokePickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE101A6227821322005337F1 /* PokePickrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokePickrTests.swift; sourceTree = "<group>"; };
+		EE101A6227821322005337F1 /* TrainerGameServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameServiceTests.swift; sourceTree = "<group>"; };
 		EE101A6827821322005337F1 /* PokePickrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokePickrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE101A6C27821322005337F1 /* PokePickrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokePickrUITests.swift; sourceTree = "<group>"; };
 		EE101A6E27821322005337F1 /* PokePickrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokePickrUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		EE101A6127821322005337F1 /* PokePickrTests */ = {
 			isa = PBXGroup;
 			children = (
-				EE101A6227821322005337F1 /* PokePickrTests.swift */,
+				EE101A6227821322005337F1 /* TrainerGameServiceTests.swift */,
 			);
 			path = PokePickrTests;
 			sourceTree = "<group>";
@@ -540,7 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE101A6327821322005337F1 /* PokePickrTests.swift in Sources */,
+				EE101A6327821322005337F1 /* TrainerGameServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

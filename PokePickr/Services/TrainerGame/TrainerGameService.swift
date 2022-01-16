@@ -3,12 +3,12 @@ import UIKit
 
 import WebAPIClient
 
-protocol TrainerGameService {
+public protocol TrainerGameService {
   func getRandomPokemon() async -> Result<PokemonGameInfo, Error>
   //  func getTypeInfo(_ type: PokemonType)
 }
 
-class DefaultTrainerGameService: TrainerGameService {
+public class DefaultTrainerGameService: TrainerGameService {
   
   // MARK: - Private Members
   
@@ -16,13 +16,13 @@ class DefaultTrainerGameService: TrainerGameService {
   
   // MARK: - Lifecycle
   
-  init(pokemonInfoRepository: PokemonInfoRepository) {
+  public init(pokemonInfoRepository: PokemonInfoRepository) {
     self.pokemonInfoRepository = pokemonInfoRepository
   }
   
   // MARK: - TrainerGameService
   
-  func getRandomPokemon() async -> Result<PokemonGameInfo, Error> {
+  public func getRandomPokemon() async -> Result<PokemonGameInfo, Error> {
     let randomNumber = Int.random(in: 1...898)
     let response = await pokemonInfoRepository.getPokemon(number: randomNumber)
     
