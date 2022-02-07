@@ -31,6 +31,7 @@
 		EE49CEE7278738AF00BC6593 /* LandingCoordinator+LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEE6278738AF00BC6593 /* LandingCoordinator+LandingViewController.swift */; };
 		EE49CEEC27874C6A00BC6593 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEEB27874C6A00BC6593 /* MainViewCoordinator.swift */; };
 		EE49CEEF27874CBB00BC6593 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEEE27874CBB00BC6593 /* MainViewController.swift */; };
+		EE53045927A21A1700E41523 /* TrainerGameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE53045827A21A1700E41523 /* TrainerGameResultViewController.swift */; };
 		EED09896278B4288003A9FAD /* TrainerGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */; };
 		EED09899278B42F7003A9FAD /* TrainerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */; };
 		EED0989C278B4E45003A9FAD /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */; };
@@ -103,6 +104,7 @@
 		EE49CEE6278738AF00BC6593 /* LandingCoordinator+LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingCoordinator+LandingViewController.swift"; sourceTree = "<group>"; };
 		EE49CEEB27874C6A00BC6593 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		EE49CEEE27874CBB00BC6593 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EE53045827A21A1700E41523 /* TrainerGameResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameResultViewController.swift; sourceTree = "<group>"; };
 		EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameCoordinator.swift; sourceTree = "<group>"; };
 		EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameViewController.swift; sourceTree = "<group>"; };
 		EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 			children = (
 				EED0989A278B4D93003A9FAD /* Views */,
 				EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */,
+				EE53045827A21A1700E41523 /* TrainerGameResultViewController.swift */,
 			);
 			path = TrainerGame;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				EED098A7278BAADA003A9FAD /* PokemonType.swift in Sources */,
 				EE49CED02785078000BC6593 /* Coordinator.swift in Sources */,
 				EED098AD278BB513003A9FAD /* Route.swift in Sources */,
+				EE53045927A21A1700E41523 /* TrainerGameResultViewController.swift in Sources */,
 				EE49CED2278507A700BC6593 /* TabBarRoutable.swift in Sources */,
 				EE49CEEF27874CBB00BC6593 /* MainViewController.swift in Sources */,
 				EED09899278B42F7003A9FAD /* TrainerGameViewController.swift in Sources */,

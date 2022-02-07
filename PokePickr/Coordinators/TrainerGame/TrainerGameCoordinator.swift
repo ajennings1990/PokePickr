@@ -76,19 +76,36 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
     let finalType = counts.first(where: { $0.value == counts.values.max() })?.key
 
     loadingAlert.dismiss(animated: true) {
-      let resultAlert = UIAlertController(
-        title: "Result",
-        message: "\nYour specialist type is \(finalType?.rawValue ?? "")\n",
-        preferredStyle: .alert
-      )
-      resultAlert.addAction(.init(title: "Ok", style: .default, handler: { [weak self] _ in
-        self?.resultCompleted()
-      }))
-      viewController.present(resultAlert, animated: true, completion: nil)
+      guard let finalType = finalType else {
+        // present Error
+        return
+      }
+      let filteredSelections = self.selections.filter { $0.types?.contains(finalType) == true }
+      self.showFinalResultType(finalType, resultSelections: filteredSelections)
     }
+    
+  }
+  
+  private func showFinalResultType(_ resultType: PokemonType, resultSelections: [PokemonGameInfo]) {
+    let resultViewController = TrainerGameResultViewController(
+      delegate: self,
+      resultType: resultType,
+      selections: resultSelections
+    )
+    navigationController.present(resultViewController, animated: true, completion: nil)
   }
   
   private func resultCompleted() {
     delegate?.trainerGameCoordinatorCompleted(self)
   }
+}
+
+extension TrainerGameCoordinator: TrainerGameResultViewControllerDelegate {
+  
+  func viewControllerDidPressDone(_ viewController: TrainerGameViewController) {
+    navigationController.dismiss(animated: true, completion: { [weak self] in
+      self?.resultCompleted()
+    })
+  }
+  
 }

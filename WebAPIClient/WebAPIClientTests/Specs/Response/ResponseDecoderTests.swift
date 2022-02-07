@@ -104,7 +104,7 @@ class ResponseDecoderTests: XCTestCase {
   }
 }
 
-class MockDecodable: Codable {
+struct MockDecodable: Codable {
   let id: Int
   let testString: String
 }

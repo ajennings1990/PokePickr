@@ -53,7 +53,7 @@ class MainViewController: UIViewController {
     return button
   }()
   
-  private let settingsButton: UIButton = {
+  private lazy var settingsButton: UIButton = {
     let button = UIButton(type: .custom)
     button.setImage(.add, for: .normal)
     return button
