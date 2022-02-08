@@ -1,7 +1,7 @@
 import UIKit
 
 protocol TrainerGameResultViewControllerDelegate: AnyObject {
-  func viewControllerDidPressDone(_ viewController: TrainerGameViewController)
+  func viewControllerDidPressDone(_ viewController: TrainerGameResultViewController)
 }
 
 class TrainerGameResultViewController: UIViewController {
@@ -30,6 +30,21 @@ class TrainerGameResultViewController: UIViewController {
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: 50, weight: .heavy)
     return label
+  }()
+  
+  private lazy var doneButton: UIButton = {
+    let button = UIButton(type: .custom)
+    button.setTitle("Done", for: .normal)
+    button.setTitleColor(.mainBlue, for: .normal)
+    button.setTitleColor(.lightGray, for: .selected)
+    button.setTitleColor(.lightGray, for: .highlighted)
+    button.layer.borderColor = UIColor.mainBlue.cgColor
+    button.layer.borderWidth = 1.0
+    button.clipsToBounds = false
+    button.layer.cornerRadius = 5.0
+    button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+    button.addTarget(self, action: #selector(doneButtonWasPressed), for: .touchUpInside)
+    return button
   }()
   
   private lazy var typeImageView: UIImageView = makeImageView(with: resultType.getImage())
@@ -76,7 +91,7 @@ class TrainerGameResultViewController: UIViewController {
       }
     
     
-    [titleLabel, typeLabel, typeImageView, pokemonStackView].forEach {
+    [titleLabel, typeLabel, typeImageView, pokemonStackView, doneButton].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       view.addSubview($0)
     }
@@ -100,9 +115,13 @@ class TrainerGameResultViewController: UIViewController {
       pokemonStackView.topAnchor.constraint(equalTo: typeImageView.bottomAnchor, constant: 40),
       pokemonStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
       pokemonStackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
-      pokemonStackView.heightAnchor.constraint(equalToConstant: 150)
+      pokemonStackView.heightAnchor.constraint(equalToConstant: 150),
+      
+      doneButton.topAnchor.constraint(equalTo: pokemonStackView.bottomAnchor, constant: 40),
+      doneButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      doneButton.heightAnchor.constraint(equalToConstant: 50),
+      doneButton.widthAnchor.constraint(equalToConstant: 100)
     ])
-    
   }
   
   // MARK: - Constructors
@@ -112,6 +131,12 @@ class TrainerGameResultViewController: UIViewController {
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.contentMode = .scaleAspectFit
     return imageView
+  }
+  
+  // MARK: - Private Actions
+  
+  @objc private func doneButtonWasPressed() {
+    delegate?.viewControllerDidPressDone(self)
   }
   
 }

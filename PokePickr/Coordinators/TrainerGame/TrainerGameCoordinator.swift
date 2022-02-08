@@ -94,18 +94,5 @@ class TrainerGameCoordinator: CoordinatorAutoCleanable {
     )
     navigationController.present(resultViewController, animated: true, completion: nil)
   }
-  
-  private func resultCompleted() {
-    delegate?.trainerGameCoordinatorCompleted(self)
-  }
-}
 
-extension TrainerGameCoordinator: TrainerGameResultViewControllerDelegate {
-  
-  func viewControllerDidPressDone(_ viewController: TrainerGameViewController) {
-    navigationController.dismiss(animated: true, completion: { [weak self] in
-      self?.resultCompleted()
-    })
-  }
-  
 }

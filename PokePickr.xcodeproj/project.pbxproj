@@ -32,6 +32,7 @@
 		EE49CEEC27874C6A00BC6593 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEEB27874C6A00BC6593 /* MainViewCoordinator.swift */; };
 		EE49CEEF27874CBB00BC6593 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CEEE27874CBB00BC6593 /* MainViewController.swift */; };
 		EE53045927A21A1700E41523 /* TrainerGameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE53045827A21A1700E41523 /* TrainerGameResultViewController.swift */; };
+		EE93107327B1E98D006CFC79 /* TrainerGameCoordinator+TrainerGameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE93107227B1E98D006CFC79 /* TrainerGameCoordinator+TrainerGameResultViewController.swift */; };
 		EED09896278B4288003A9FAD /* TrainerGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */; };
 		EED09899278B42F7003A9FAD /* TrainerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */; };
 		EED0989C278B4E45003A9FAD /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */; };
@@ -105,6 +106,7 @@
 		EE49CEEB27874C6A00BC6593 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		EE49CEEE27874CBB00BC6593 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EE53045827A21A1700E41523 /* TrainerGameResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameResultViewController.swift; sourceTree = "<group>"; };
+		EE93107227B1E98D006CFC79 /* TrainerGameCoordinator+TrainerGameResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainerGameCoordinator+TrainerGameResultViewController.swift"; sourceTree = "<group>"; };
 		EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameCoordinator.swift; sourceTree = "<group>"; };
 		EED09898278B42F7003A9FAD /* TrainerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerGameViewController.swift; sourceTree = "<group>"; };
 		EED0989B278B4E45003A9FAD /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			children = (
 				EED09895278B4288003A9FAD /* TrainerGameCoordinator.swift */,
 				EE041CA82793B0E5003AB6F2 /* TrainerGameCoordinator+TrainerGameViewController.swift */,
+				EE93107227B1E98D006CFC79 /* TrainerGameCoordinator+TrainerGameResultViewController.swift */,
 			);
 			path = TrainerGame;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				EE101A532782131E005337F1 /* PokePickr.xcdatamodeld in Sources */,
 				EE101A4B2782131E005337F1 /* SceneDelegate.swift in Sources */,
 				EE49CEE427850C3F00BC6593 /* UIColor+Extensions.swift in Sources */,
+				EE93107327B1E98D006CFC79 /* TrainerGameCoordinator+TrainerGameResultViewController.swift in Sources */,
 				EE041CAF2793B702003AB6F2 /* MainViewCoordinatoor+MainViewControllerDelegate.swift in Sources */,
 				EE49CEDE2785090200BC6593 /* LandingViewController.swift in Sources */,
 				EED09896278B4288003A9FAD /* TrainerGameCoordinator.swift in Sources */,
@@ -728,7 +732,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aj.PokePickr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -757,7 +761,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aj.PokePickr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
